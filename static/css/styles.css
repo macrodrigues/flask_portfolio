@@ -1,5 +1,5 @@
 .navbar {
-    box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+    box-shadow: -8px -15px 6px 16px rgb(0 0 0)
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -9,13 +9,14 @@
 .navbar-dark .navbar-brand {
     color: #f5deb3;
     font-family: 'Fredoka', sans-serif;
-    font-size: 130%;
+    font-size: 1.5vw;
     font-weight: 800;
 }
 
 .bg-image {
     background-image: url(../images/header_3.JPG);
-    height: 14em;
+    margin-top: 55px;
+    height: 14vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
 }
 
@@ -24,15 +25,27 @@
     text-align: center;
     background-color: #f5deb3;
     border-color: #f5deb3;
-    font-size: 14px;
+    font-size: 1vw;
     font-family: 'Fredoka', sans-serif;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
     font-weight: 800;
-    height: 35px;
-    width: 90px;
+    height: 2.7vw;
+    width: 8vw;
     white-space: normal;
     word-wrap: break-word;
-} 
+}
+
+@media only screen and (max-width: 290px) {
+    .bg-image, .text-white, .profile-pic {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 725px) {
+    .btn-secondary, .btn {
+      display: none;
+    }
+  }
 
 .btn-secondary:focus, .btn:focus, .btn-secondary:hover, 
 .btn:hover{
@@ -45,12 +58,13 @@ a:focus {
 }
 
 .text-white {
-    padding: 2%;
+    padding: 1%;
+    max-height: 220px;
 }
 
 .h1-header {
     font-family: 'Zen Kurenaido', sans-serif;
-    font-size: 40px;
+    font-size: 4vw;
     font-weight: 800;
 }
 
@@ -58,15 +72,15 @@ a:focus {
     font-family: 'Bellota Text', cursive;
     font-style: italic;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.5vw;
     color: rgb(188, 187, 187);
 }
 
 .profile-pic {
     margin-top: 1%;
-    margin-left: 28%;
-    width: 18%;
-    height: 18%;
+    margin-left: 25%;
+    width: 15%;
+    height: 15%;
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
@@ -75,10 +89,22 @@ a:focus {
 
 .about-title {
     font-size: 250%;
-    margin-top: 5%;
+    margin-top: 2%;
     font-family: 'Zen Kurenaido', sans-serif;
     font-weight: 1000;
     color: black;
+}
+
+.services-title {
+    font-size: 250%;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: 1000;
+    padding-top: 20px;
+    color: black;
+}
+
+.services-header {
+    text-align: center;
 }
 
 .about-header {
@@ -86,17 +112,14 @@ a:focus {
 }
 
 .about-text{
-    margin-left: 23%;
-    margin-right: 23%;
-    margin-top: 2%;
-}
-
-.icons-bars-container {
-    overflow: hidden;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 1.5%;
 }
 
 .prog-bars {
     margin-top: 3%;
+    margin-bottom: 4%;
     margin-left: 35%;
     margin-right: 35%;
     width: 30%;
@@ -122,29 +145,60 @@ a:focus {
 }
 
 .icons-container {
-    padding-top: 5%;
+    padding-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.material-symbols-outlined.md-80 {
+.icons-about-container {
+    padding-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden
+}
+
+.material-symbols-outlined.md-100 {
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
   'GRAD' 0,
   'opsz' 48;
-  font-size: 80px;
+  font-size: 100px;
   color: rgb(85, 85, 85);
   vertical-align: middle;
   display: inline-block;
 }
 
+p {
+    display:inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.material-symbols-outlined.md-30 {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    font-size: 30px;
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    display: inline-block;
+  }
+
 .icon-align {
     display: inline-block;
     text-align: center;
     width: 150px;
+}
+
+.icon-about-align {
+    padding-bottom: 30px;
 }
 
 .caption-icon {
@@ -154,4 +208,23 @@ a:focus {
     font-family: 'Bellota Text', cursive;
     font-style: italic;
     font-size: 10px;
+}
+
+.subtitle {
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.services-section {
+    background-color: #f5deb33b;
+}
+
+.img-icon {
+    /* filter: opacity(0.1) drop-shadow(0 0 0 rgb(0, 0, 0)); */
+    filter: opacity(0.4) grayscale(100%);
+}
+
+.img-icon:hover {
+    opacity: .5;
 }
