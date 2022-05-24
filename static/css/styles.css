@@ -1,63 +1,56 @@
+html,body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
-    box-shadow: -8px -15px 6px 16px rgb(0 0 0)
+    box-shadow: -8px -15px 6px 16px rgb(0 0 0);
+    min-width: 80px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: #f5deb3;
+
 }
+
+.navbar-toggle {
+    margin-top: 23px;
+    padding: 9px 10px !important;
+  }
 
 .navbar-dark .navbar-brand {
     color: #f5deb3;
     font-family: 'Fredoka', sans-serif;
     font-size: 1.5vw;
     font-weight: 800;
+    padding: 0 15px;
+    height: 30px;
 }
 
 .bg-image {
     background-image: url(../images/header_3.JPG);
     margin-top: 55px;
-    height: 14vw;
+    height: 12vw;
+    width: 100vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
-}
+    }
 
-.btn-secondary, .btn {
-    color: rgb(99, 99, 99);
-    text-align: center;
-    background-color: #f5deb3;
-    border-color: #f5deb3;
-    font-size: 1vw;
-    font-family: 'Fredoka', sans-serif;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
-    font-weight: 800;
-    height: 2.7vw;
-    width: 8vw;
-    white-space: normal;
-    word-wrap: break-word;
-}
 
 @media only screen and (max-width: 290px) {
     .bg-image, .text-white, .profile-pic {
-      display: none;
+    display: none;
     }
-  }
-
-  @media only screen and (max-width: 725px) {
-    .btn-secondary, .btn {
-      display: none;
-    }
-  }
-
-.btn-secondary:focus, .btn:focus, .btn-secondary:hover, 
-.btn:hover{
-    background-color:transparent!important;
-    border-color: transparent!important;
 }
 
-a:focus {
-    color:transparent;
+@media only screen and (max-width: 306px) {
+.navbar-dark .navbar-brand {
+    display: none;
+}
 }
 
 .text-white {
+    margin-top: 1%;
     padding: 1%;
     max-height: 220px;
 }
@@ -72,19 +65,49 @@ a:focus {
     font-family: 'Bellota Text', cursive;
     font-style: italic;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: rgb(188, 187, 187);
 }
 
 .profile-pic {
     margin-top: 1%;
-    margin-left: 25%;
-    width: 15%;
-    height: 15%;
+    margin-left: 24%;
+    width: 13%;
+    height: 13%;
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+}
+
+/* -------------- About Section ------------------ */
+
+.about-section {
+    position: static;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 0px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
 }
 
 .about-title {
@@ -95,15 +118,15 @@ a:focus {
     color: black;
 }
 
-.services-title {
+.skills-title {
     font-size: 250%;
     font-family: 'Zen Kurenaido', sans-serif;
     font-weight: 1000;
-    padding-top: 20px;
+    padding-top: 3%;
     color: black;
 }
 
-.services-header {
+.skills-header {
     text-align: center;
 }
 
@@ -112,14 +135,14 @@ a:focus {
 }
 
 .about-text{
-    margin-left: 22%;
-    margin-right: 22%;
+    margin-left: 25%;
+    margin-right: 25%;
     margin-top: 1.5%;
 }
 
 .prog-bars {
     margin-top: 3%;
-    margin-bottom: 4%;
+    margin-bottom: 12%;
     margin-left: 35%;
     margin-right: 35%;
     width: 30%;
@@ -153,30 +176,39 @@ a:focus {
 }
 
 .icons-about-container {
-    padding-top: 3%;
+    padding-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden
+}
+
+.langs-icons-about-container {
+    padding-top: 3.2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .material-symbols-outlined.md-100 {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48;
-  font-size: 100px;
-  color: rgb(85, 85, 85);
-  vertical-align: middle;
-  display: inline-block;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    font-size: 100px;
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    display: inline-block;
 }
 
-p {
+.p-img-icon{
     display:inline-block;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .material-symbols-outlined.md-30 {
@@ -189,17 +221,16 @@ p {
     color: rgb(85, 85, 85);
     vertical-align: middle;
     display: inline-block;
-  }
+}
 
 .icon-align {
     display: inline-block;
     text-align: center;
+    margin-left: 4px;
+    margin-right: 4px;
     width: 150px;
 }
 
-.icon-about-align {
-    padding-bottom: 30px;
-}
 
 .caption-icon {
     display: block;
@@ -216,7 +247,7 @@ p {
     font-weight: 900;
 }
 
-.services-section {
+.skills-section {
     background-color: #f5deb33b;
 }
 
@@ -227,4 +258,112 @@ p {
 
 .img-icon:hover {
     opacity: .5;
+}
+
+.lang-img-icon {
+    margin: 10px;
+}
+
+.lang-img-icon:hover {
+    opacity: .5;
+}
+
+/* -------------- Projects Section ------------------ */
+
+.projects-header {
+    text-align: center;
+    padding: 3%;
+}
+
+.projects-title {
+    font-size: 250%;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: 1000;
+    color: black;
+}
+
+.card-img:hover, .card-img-top:hover {
+    opacity: .5;
+}
+
+.img-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+    display: block;
+}
+
+
+.title-img-gallery {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bolder;
+}
+
+.heroku {
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* -------------- Contact Section ------------------ */
+
+.contact-section {
+    background-color: #f5deb33b;
+}
+
+.contact-header {
+    text-align: center;
+    padding: 3%;
+}
+
+.contact-title {
+    font-size: 250%;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: 1000;
+    color: black;
+}
+
+.contact-container {
+    width: 670px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 88px 300px 190px;
+}
+
+.contact-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 26px;
+    padding-top: 5px;
+}
+
+.contact-label-input {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.2;
+    text-align: right;
+    position: absolute;
+    top: 14px;
+    left: -105px;
+    width: 80px;
+}
+
+.form-control {
+    border: 1px solid #7c7c7c;
+}
+
+.form-control:focus {
+    border-color: #f5deb3;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f5deb3;;
 }
