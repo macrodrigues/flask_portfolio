@@ -1,8 +1,5 @@
-html,body {
-    position: relative;
-    margin: 0;
-    padding: 0;
-}
+
+/* Main section */
 
 .navbar {
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
@@ -22,7 +19,7 @@ html,body {
 .navbar-dark .navbar-brand {
     color: #f5deb3;
     font-family: 'Fredoka', sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight: 800;
     padding: 0 15px;
     height: 30px;
@@ -31,14 +28,14 @@ html,body {
 .bg-image {
     background-image: url(../images/header_3.JPG);
     margin-top: 55px;
-    height: 12vw;
+    height: 11vw;
     width: 100vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
     }
 
 
 @media only screen and (max-width: 290px) {
-    .bg-image, .text-white, .profile-pic {
+.bg-image, .text-white, .profile-pic {
     display: none;
     }
 }
@@ -46,12 +43,12 @@ html,body {
 @media only screen and (max-width: 306px) {
 .navbar-dark .navbar-brand {
     display: none;
-}
+    }
 }
 
 .text-white {
-    margin-top: 1%;
-    padding: 1%;
+    margin-top: 0.5%;
+    padding: 0.5%;
     max-height: 220px;
 }
 
@@ -71,7 +68,7 @@ html,body {
 
 .profile-pic {
     margin-top: 1%;
-    margin-left: 24%;
+    margin-left: 27%;
     width: 13%;
     height: 13%;
     border-radius: 50%;
@@ -84,30 +81,8 @@ html,body {
 
 .about-section {
     position: static;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    display: block;
     width: 100vw;
-    height: 100vh;
-    padding-bottom: 0px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-align: stretch;
-    -webkit-align-items: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
+    min-height: 80vh;
 }
 
 .about-title {
@@ -116,18 +91,6 @@ html,body {
     font-family: 'Zen Kurenaido', sans-serif;
     font-weight: 1000;
     color: black;
-}
-
-.skills-title {
-    font-size: 250%;
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-weight: 1000;
-    padding-top: 3%;
-    color: black;
-}
-
-.skills-header {
-    text-align: center;
 }
 
 .about-header {
@@ -168,7 +131,6 @@ html,body {
 }
 
 .icons-container {
-    padding-top: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -270,12 +232,12 @@ html,body {
 
 /* -------------- Projects Section ------------------ */
 
-.projects-header {
+.skills-header, .projects-header, .contact-header {
     text-align: center;
-    padding: 3%;
+    padding: 5%;
 }
 
-.projects-title {
+.skills-title, .projects-title, .contact-title {
     font-size: 250%;
     font-family: 'Zen Kurenaido', sans-serif;
     font-weight: 1000;
@@ -311,18 +273,6 @@ html,body {
     background-color: #f5deb33b;
 }
 
-.contact-header {
-    text-align: center;
-    padding: 3%;
-}
-
-.contact-title {
-    font-size: 250%;
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-weight: 1000;
-    color: black;
-}
-
 .contact-container {
     width: 670px;
     margin: 0 auto;
@@ -338,7 +288,7 @@ html,body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 88px 300px 190px;
+    padding: 0% 20% 8% 22%;
 }
 
 .contact-input {
@@ -366,4 +316,42 @@ html,body {
 .form-control:focus {
     border-color: #f5deb3;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #f5deb3;;
+}
+
+.submit-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.contact-form .button-1 {
+  background-color: #f8c464;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #616161;
+  cursor: pointer;
+  display: block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  margin-top: 15%;
+  outline: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #f5deb3;
+  color: #ffffff;
 }
