@@ -1,6 +1,2 @@
 Flask==2.0.2
 python-dotenv==0.20.0
-smtplib
-os
-datetime
-random
