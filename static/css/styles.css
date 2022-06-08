@@ -30,7 +30,6 @@
     background-image: url(../images/header_3.JPG);
     margin-top: 55px;
     height: 11vw;
-    width: 100vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
     }
 
@@ -256,13 +255,11 @@
 
 .about-section {
     position: static;
-    width: 100vw;
     min-height: 80vh;
 }
 
 .colored-section {
     background-color: #f5deb33b;
-    width: 100vw;
 }
 
 /* Form */
