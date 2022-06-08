@@ -301,7 +301,7 @@
 
 .form-control {
     border: 1px solid #7c7c7c;
-    width: 35vw;
+    width: 50vw;
     height: calc(1.5em + 0.75rem + 2%);
 }
 
@@ -315,7 +315,7 @@
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
-    margin-left: 13vw;
+    margin-left: 0vw;
 }
 
 .contact-form .button-1 {
