@@ -1,5 +1,4 @@
-
-/* Main section */
+/* navbar */
 
 .navbar {
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
@@ -25,6 +24,8 @@
     height: 30px;
 }
 
+/* About */
+
 .bg-image {
     background-image: url(../images/header_3.JPG);
     margin-top: 55px;
@@ -35,7 +36,7 @@
 
 
 @media only screen and (max-width: 290px) {
-.bg-image, .text-white, .profile-pic {
+.text-white {
     display: none;
     }
 }
@@ -45,6 +46,12 @@
     display: none;
     }
 }
+
+@media only screen and (max-width: 544px) {
+    .h4-header {
+        display: none;
+        }
+    }
 
 .text-white {
     margin-top: 0.5%;
@@ -77,14 +84,6 @@
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
 }
 
-/* -------------- About Section ------------------ */
-
-.about-section {
-    position: static;
-    width: 100vw;
-    min-height: 80vh;
-}
-
 .about-title {
     font-size: 250%;
     margin-top: 2%;
@@ -102,6 +101,8 @@
     margin-right: 25%;
     margin-top: 1.5%;
 }
+
+/* skills section */
 
 .prog-bars {
     margin-top: 3%;
@@ -209,10 +210,6 @@
     font-weight: 900;
 }
 
-.skills-section {
-    background-color: #f5deb33b;
-}
-
 .img-icon {
     /* filter: opacity(0.1) drop-shadow(0 0 0 rgb(0, 0, 0)); */
     filter: opacity(0.4) grayscale(100%);
@@ -230,19 +227,7 @@
     opacity: .5;
 }
 
-/* -------------- Projects Section ------------------ */
-
-.skills-header, .projects-header, .contact-header {
-    text-align: center;
-    padding: 5%;
-}
-
-.skills-title, .projects-title, .contact-title {
-    font-size: 250%;
-    font-family: 'Zen Kurenaido', sans-serif;
-    font-weight: 1000;
-    color: black;
-}
+/* Projects */
 
 .card-img:hover, .card-img-top:hover {
     opacity: .5;
@@ -267,14 +252,23 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-/* -------------- Contact Section ------------------ */
+/* Sections*/
 
-.contact-section {
-    background-color: #f5deb33b;
+.about-section {
+    position: static;
+    width: 100vw;
+    min-height: 80vh;
 }
 
+.colored-section {
+    background-color: #f5deb33b;
+    width: 100vw;
+}
+
+/* Form */
+
 .contact-container {
-    width: 670px;
+    width: 55%;
     margin: 0 auto;
     justify-content: center;
 }
@@ -303,14 +297,12 @@
     color: #000000;
     line-height: 1.2;
     text-align: right;
-    position: absolute;
-    top: 14px;
-    left: -105px;
-    width: 80px;
 }
 
 .form-control {
     border: 1px solid #7c7c7c;
+    width: 35vw;
+    height: calc(1.5em + 0.75rem + 2%);
 }
 
 .form-control:focus {
@@ -319,11 +311,11 @@
 }
 
 .submit-container {
-    width: 100%;
     position: relative;
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
+    margin-left: 13vw;
 }
 
 .contact-form .button-1 {
@@ -333,13 +325,11 @@
   box-sizing: border-box;
   color: #616161;
   cursor: pointer;
-  display: block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
-  margin-top: 15%;
   outline: none;
   padding: 10px 16px;
   text-align: center;
@@ -354,4 +344,23 @@
 .button-1:focus {
   background-color: #f5deb3;
   color: #ffffff;
+}
+
+/* others */
+
+.other-header {
+    text-align: center;
+    padding: 5%;
+}
+
+.other-title {
+    font-size: 250%;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-weight: 1000;
+    color: black;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
