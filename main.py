@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
 import random
@@ -27,12 +29,16 @@ def receive_data():
         return render_template('submission.html')
 
 def send_email(name, email, phone, message):
-    email_message = f"Subject:Contact Portfolio\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
-    print(email_message)
+    email_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+    msg = MIMEMultipart()
+    msg['To']= OWN_EMAIL  
+    msg['Subject']='Contact Portfolio'
+    msg.attach(MIMEText(email_message, "plain"))
+    text = msg.as_string()
     with smtplib.SMTP(host='smtp-mail.outlook.com', port=587) as connection:
         connection.starttls()
         connection.login(OWN_EMAIL, OWN_PASSWORD)
-        connection.sendmail(OWN_EMAIL, OWN_EMAIL, email_message.encode('utf-8'))
+        connection.sendmail(OWN_EMAIL, OWN_EMAIL, text)
 
 if __name__=='__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
