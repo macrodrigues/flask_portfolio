@@ -1,4 +1,4 @@
-from flask import Flask, flash, redirect, render_template, request, url_for
+from flask import Flask, render_template, request
 from flask_recaptcha import ReCaptcha # Import ReCaptcha object
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

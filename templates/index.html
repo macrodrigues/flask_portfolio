@@ -31,17 +31,6 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marco Rodrigues</title>
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul class=flashes>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-    {% block body %}{% endblock %}
-    <!-- add icon link -->
     <link rel = "icon" href = "static/images/profile-pic.png" type = "image/x-icon" style="border-radius: 50%;">
 </head>
 <body>
