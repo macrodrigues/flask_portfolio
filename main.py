@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, flash, redirect, render_template, request, url_for
+from flask_recaptcha import ReCaptcha # Import ReCaptcha object
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
@@ -12,6 +13,9 @@ OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
 app = Flask(__name__)
+app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
+app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
+recaptcha = ReCaptcha(app) # Create a ReCaptcha object by passing in 'app' as parameter
 
 @app.route("/")
 def hello_world():
@@ -21,12 +25,15 @@ def hello_world():
 @app.route("/submit", methods=["POST"])
 def receive_data():
     if request.method == "POST":
-        name = request.form["name"]
-        mail = request.form["mail"]
-        phone = request.form["phone"]
-        message = request.form["message"]
-        send_email(name, mail, phone, message)
-        return render_template('submission.html')
+        if recaptcha.verify():
+            name = request.form["name"]
+            mail = request.form["mail"]
+            phone = request.form["phone"]
+            message = request.form["message"]
+            send_email(name, mail, phone, message)
+            return render_template('submission.html')
+        else:
+            return render_template('index.html')
 
 def send_email(name, email, phone, message):
     email_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
