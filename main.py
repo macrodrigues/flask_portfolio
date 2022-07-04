@@ -12,6 +12,7 @@ load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
 OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
+
 app = Flask(__name__)
 app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
 app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
