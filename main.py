@@ -12,8 +12,8 @@ OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
 app = Flask(__name__)
-app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
-app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
+# app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
+# app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
 recaptcha = ReCaptcha(app) # Create a ReCaptcha object by passing in 'app' as parameter
 
 @app.route("/")
