@@ -4,7 +4,6 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
-import random
 import smtplib
 import datetime as dt
 load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
@@ -22,18 +21,18 @@ def hello_world():
     current_year = dt.datetime.now().year
     return render_template('index.html', year = current_year)
 
-@app.route("/submit", methods=["POST"])
-def receive_data():
-    if request.method == "POST":
-        if recaptcha.verify():
-            name = request.form["name"]
-            mail = request.form["mail"]
-            phone = request.form["phone"]
-            message = request.form["message"]
-            send_email(name, mail, phone, message)
-            return render_template('submission.html')
-        else:
-            return render_template('index.html')
+# @app.route("/submit", methods=["POST"])
+# def receive_data():
+#     if request.method == "POST":
+#         if recaptcha.verify():
+#             name = request.form["name"]
+#             mail = request.form["mail"]
+#             phone = request.form["phone"]
+#             message = request.form["message"]
+#             send_email(name, mail, phone, message)
+#             return render_template('submission.html')
+#         else:
+#             return render_template('index.html')
 
 def send_email(name, email, phone, message):
     email_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
