@@ -362,3 +362,19 @@
     margin-right: 0;
     margin-left: 0;
 }
+
+.g-recaptcha {
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    transform-origin:0 0;
+    -webkit-transform-origin:0 0;
+}
+
+@media screen and (max-height: 767px){
+    .g-recaptcha {
+        transform:scale(0.77);
+        -webkit-transform:scale(0.77);
+        transform-origin:0 0;
+        -webkit-transform-origin:0 0;
+        }
+    }

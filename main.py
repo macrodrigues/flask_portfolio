@@ -12,7 +12,6 @@ load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
 OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
-
 app = Flask(__name__)
 app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
 app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
@@ -50,6 +49,7 @@ def send_email(name, email, phone, message):
 
 if __name__=='__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.config['RECAPTCHA_SIZE'] = 'compact'
     # port = 5000 + random.randint(0, 999)
     # url = f"http://127.0.0.1:{port}"
     app.run(debug=True, port=5000, host="0.0.0.0")
