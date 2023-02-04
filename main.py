@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import os
 import smtplib
 import datetime as dt
+
 load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
 
 OWN_EMAIL = os.getenv('mail')
