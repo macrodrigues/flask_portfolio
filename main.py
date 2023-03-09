@@ -20,13 +20,17 @@ app.config['RECAPTCHA_SECRET_KEY'] = \
     os.getenv('key_secret')  # <-- Add your secret key
 recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
 
+
 @app.route("/")
-def hello_world():
+def home():
+    """Render index.html template."""
     current_year = dt.datetime.now().year
     return render_template('index.html', year=current_year)
 
+
 @app.route("/submit", methods=["POST"])
 def receive_data():
+    """Receive the input from the contact section."""
     if request.method == "POST":
         if recaptcha.verify():
             name = request.form["name"]
@@ -38,11 +42,14 @@ def receive_data():
         else:
             return render_template('index.html')
 
+
 def send_email(name, email, phone, message):
-    email_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+    """Send email to my personal account with smtp."""
+    email_message = \
+        f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
     msg = MIMEMultipart()
-    msg['To']= OWN_EMAIL  
-    msg['Subject']='Contact Portfolio'
+    msg['To'] = OWN_EMAIL
+    msg['Subject'] = 'Contact Portfolio'
     msg.attach(MIMEText(email_message, "plain"))
     text = msg.as_string()
     with smtplib.SMTP(host='smtp-mail.outlook.com', port=587) as connection:
@@ -50,9 +57,8 @@ def send_email(name, email, phone, message):
         connection.login(OWN_EMAIL, OWN_PASSWORD)
         connection.sendmail(OWN_EMAIL, OWN_EMAIL, text)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.config['RECAPTCHA_SIZE'] = 'compact'
-    # port = 5000 + random.randint(0, 999)
-    # url = f"http://127.0.0.1:{port}"
-    app.run(debug=True, port=5000, host="0.0.0.0")
+    app.run(port=5000)
