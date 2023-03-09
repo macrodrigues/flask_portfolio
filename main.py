@@ -1,5 +1,6 @@
+"""This script launches the Flask server and renders the portfolio page."""
 from flask import Flask, render_template, request
-from flask_recaptcha import ReCaptcha # Import ReCaptcha object
+from flask_recaptcha import ReCaptcha  # Import ReCaptcha object
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
@@ -13,14 +14,16 @@ OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
 app = Flask(__name__)
-app.config['RECAPTCHA_SITE_KEY'] = os.getenv('key_site') # <-- Add your site key
-app.config['RECAPTCHA_SECRET_KEY'] = os.getenv('key_secret') # <-- Add your secret key
-recaptcha = ReCaptcha(app) # Create a ReCaptcha object by passing in 'app' as parameter
+app.config['RECAPTCHA_SITE_KEY'] = \
+    os.getenv('key_site')  # <-- Add your site key
+app.config['RECAPTCHA_SECRET_KEY'] = \
+    os.getenv('key_secret')  # <-- Add your secret key
+recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
 
 @app.route("/")
 def hello_world():
     current_year = dt.datetime.now().year
-    return render_template('index.html', year = current_year)
+    return render_template('index.html', year=current_year)
 
 @app.route("/submit", methods=["POST"])
 def receive_data():
@@ -52,4 +55,4 @@ if __name__=='__main__':
     app.config['RECAPTCHA_SIZE'] = 'compact'
     # port = 5000 + random.randint(0, 999)
     # url = f"http://127.0.0.1:{port}"
-    app.run(debug=True, port=6000, host="0.0.0.0")
+    app.run(debug=True, port=5000, host="0.0.0.0")

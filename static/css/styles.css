@@ -19,16 +19,19 @@
     color: #f5deb3;
     font-family: 'Fredoka', sans-serif;
     font-size: clamp(15px, 1.7vw, 30px);
+    /* position: fixed;
     font-weight: 800;
     padding: 0 15px;
-    height: 30px;
+    height: 40px; */
 }
 
 /* About */
 
 .bg-image {
-    background-image: url(../images/header_3.JPG);
+    background-image: url(../images/img-header-2.png);
     margin-top: 55px;
+    background-position: center;
+    background-size: cover;
     height: 11vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
     }
@@ -40,11 +43,11 @@
     }
 }
 
-@media only screen and (max-width: 306px) {
+/* @media only screen and (max-width: 306px) {
 .navbar-dark .navbar-brand {
     display: none;
     }
-}
+} */
 
 @media only screen and (max-width: 544px) {
     .h4-header {
@@ -96,9 +99,10 @@
 }
 
 .about-text{
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 21%;
+    margin-right: 21%;
     margin-top: 1.5%;
+    text-align: justify;
 }
 
 /* skills section */
