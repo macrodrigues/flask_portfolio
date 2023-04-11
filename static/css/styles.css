@@ -10,6 +10,19 @@
 
 }
 
+.nav-link-special {
+    font-weight: 800;
+    text-shadow: 1px 0 #cb4d4d, -1px 0 #cb4d4d, 0 1px #cb4d4d, 0 -1px #cb4d4d,
+             1px 1px #cb4d4d, -1px -1px #cb4d4d, 1px -1px #cb4d4d, -1px 1px #cb4d4d;
+    font-size: larger;
+    padding-top: 7%;
+}
+
+.nav-link-special:hover {
+    color: #f5deb3;
+    font-weight: 500;
+}
+
 .navbar-toggle {
     margin-top: 23px;
     padding: 9px 10px !important;
