@@ -40,5 +40,26 @@
     navbarToggler.addEventListener('click', function() {
         navbarCollapse.classList.toggle('show');
     });
+
+    // Get the element to be animated
+    const fadeElem = document.querySelector('.fade-in');
+
+    // Create a new Intersection Observer object
+    const observer = new IntersectionObserver(entries => {
+    // Loop over the entries array
+    entries.forEach(entry => {
+        // Check if the target element is intersecting with the viewport
+        if (entry.isIntersecting) {
+        // Add the "fade-in" class to start the animation
+        fadeElem.classList.add('fade-in');
+        } else {
+        // Remove the "fade-in" class to stop the animation
+        fadeElem.classList.remove('fade-in');
+        }
+    });
+    });
+
+    // Start observing the target element
+    observer.observe(fadeElem);
 </script>
 </html>

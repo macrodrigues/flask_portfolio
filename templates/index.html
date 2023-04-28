@@ -11,13 +11,16 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a href="https://www.corkforms.xyz/" class="nav-link nav-link-special">New</a>
-            </li>                      
+            </li>                                  
             <li class="nav-item">
                 <a href="#skills" class="nav-link">Skills</a>
             </li>
             <li class="nav-item">
                 <a href="#projects" class="nav-link">Projects</a>
             </li>
+            <li class="nav-item">
+                <a href="https://www.medium.com/@macrodrigues" class="nav-link">Blog</a>
+            </li>            
             <li class="nav-item">
                 <a href="#contact" class="nav-link">Contact</a>
             </li>                        
@@ -53,7 +56,7 @@
     <div class="langs-icons-about-container">
         <div class="row">
             <div class="icon-about-container">
-                <h3 class="subtitle">Languages:</h3>
+                <h3 class="subtitle">I speak </h3>
                 <div class="icon-about-align">
                     <p class="p-img-icon">
                         <img alt="portugal" width="30px" src="static/images/icons/portugal.png" class="lang-img-icon" />
@@ -74,38 +77,24 @@
     <div class="icons-about-container">
         <div class="row">
             <div class="icon-about-container">
-                <h3 class="subtitle">Find me here:</h3>
-                <div class="icon-about-align">             
+                <h3 class="subtitle">Find me here</h3>
+                <div class="icon-about-align" style="margin-top:4%">             
                     <p class="p-img-icon">
                         <a href="https://www.linkedin.com/in/macrodrigues" target="_blank">
-                            <img alt="linkedin" width="40px" src="static/images/icons/linkedin.png" class="img-icon" />
-                        </a>
-                    </p>
-                    <p class="p-img-icon">
-                        <a href="https://github.com/macrodrigues" target="_blank">
-                            <img alt="github" width="40px" src="static/images/icons/github.png" class="img-icon" />
-                        </a>
-                    </p>
-                    <p class="p-img-icon">
-                        <a href="https://peakd.com/@macrodrigues" target="_blank">
-                            <img alt="pakd" width="50px" src="static/images/icons/peakd.png" class="img-icon"/>
+                            <img alt="linkedin" width="60x" src="static/images/icons/linkedin.svg" class="img-icon" />
                         </a>
                     </p>
                     <p class="p-img-icon">
                         <a href="https://medium.com/@macrodrigues" target="_blank">
-                            <img alt="linkedin" width="50px" src="static/images/icons/medium.png" class="img-icon" />
+                            <img alt="linkedin" width="80px" src="static/images/icons/medium.svg" class="img-icon" />
                         </a>
-                    </p>                                  
+                    </p>                        
                     <p class="p-img-icon">
-                        <a href="https://www.kaggle.com/marcocavaco/" target="_blank">
-                            <img alt="kaggle" width="90px" src="static/images/icons/kaggle.png" class="img-icon"/>
+                        <a href="https://github.com/macrodrigues" target="_blank">
+                            <img alt="github" width="60px" src="static/images/icons/github.svg" class="img-icon" />
                         </a>
                     </p>
-                    <p class="p-img-icon">
-                        <a href="https://stackoverflow.com/users/17751176/marco-rodrigues" target="_blank">
-                            <img alt="stack-overflow" width="190px" src="static/images/icons/stack-overflow.png" class="img-icon"/>
-                        </a>
-                    </p>         
+                                      
                 </div>
             </div>
         </div>
@@ -175,7 +164,42 @@
         <h1 class="other-title">Projects</h1>
     </div>
     <div>
-      <div class="row">
+      <div class="row fade-in">
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm">
+                <a href="https://medium.com/@macrodrigues/is-this-transaction-legit-revolut-fraud-detection-facddbc0fc80">
+                  <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*FAfnNRfDN7Duf9XuV8794w.jpeg" width="30px" alt="" class="img-fluid card-img-top">
+                </a>    
+              <div class="p-4">
+                <h5 class="title-img-gallery">Is this transaction legit? Revolut Fraud Detection</h5>
+                <p class="small text-muted mb-0">This project aims to build a model to detect fraudsters on a Revolut Dataset.</p>
+                <div class="project-category" style="background-color: rgba(192, 32, 32, 0.856); color: wheat">
+                    <p>Machine Learning</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End -->        
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+            <div class="bg-white rounded shadow-sm">
+                <a href="https://medium.com/@macrodrigues/web-scraping-with-scrapy-and-splash-3d5666ba78ff">
+                  <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Z02uV_be03OprLACopW2pQ.jpeg" width="30px" alt="" class="img-fluid card-img-top">
+                </a>    
+              <div class="p-4">
+                <h5 class="title-img-gallery">Web Scraping with Scrapy and Splash</h5>
+                <p class="small text-muted mb-0">I used the Scrapy framework and Splash as the headless browser to do web scraping on Yescapa website.</p>
+                <div class="project-category" style="background-color: rgba(105, 63, 7, 0.856); color: wheat">
+                    <p>Web Scraping</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End -->
+ 
         <!-- Gallery item -->
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
             <div class="bg-white rounded shadow-sm">
@@ -185,6 +209,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Gather data by creating a survey app with Flask-WTF</h5>
                 <p class="small text-muted mb-0">With Flask and Flask-WTF, you can easily build forms with the most common widgets. In this project, I pretend to build a survey to gather enough data for a market study.</p>
+                <div class="project-category" style="background-color: rgba(19, 43, 98, 0.856); color: wheat">
+                    <p>Web Development</p>
+                </div>
               </div>
             </div>
           </div>
@@ -199,6 +226,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Analysing Global Trades with Dash Plotly and Flask</h5>
                 <p class="small text-muted mb-0">This project aims to analise and visualise global trades using Dash Plotly and Flask.</p>
+                <div class="project-category" style="background-color: rgb(30, 172, 101); color: wheat"">
+                    <p>Data Visualization</p>
+                </div>                
               </div>
             </div>
           </div>
@@ -213,6 +243,9 @@
             <div class="p-4">
               <h5 class="title-img-gallery">Building a dashboard with Dash and Plotly</h5>
               <p class="small text-muted mb-0">Dash library from Plotly. Allows to build HTML and CSS components, that can easily be connected to Plotly graphs and other components. Here a simple example of a dashboard with data of exoplanets from NASA database. </p>
+              <div class="project-category" style="background-color: rgb(30, 172, 101); color: wheat">
+                <p>Data Visualization</p>
+              </div>               
             </div>
           </div>
         </div>
@@ -227,6 +260,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Extract attachments from email with Python</h5>
                 <p class="small text-muted mb-0">pywin 32 is python library for windows, adapted from VBA, which allows to interact with outlook.</p>
+                <div class="project-category" style="background-color: rgb(78, 81, 79); color: wheat">
+                    <p>Automation</p>
+                </div>                  
               </div>
             </div>
         </div>
@@ -241,6 +277,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Building an APK to detect mediterranean butterflies</h5>
                 <p class="small text-muted mb-0">Using Kivy and Buildozer Python libraries, to generate an .apk. Debugging using android studio.</p>
+                <div class="project-category" style="background-color: rgb(236, 173, 47); color: rgb(0, 0, 0)">
+                    <p>GUI Development</p>
+                </div>                       
               </div>
             </div>
         </div>
@@ -255,6 +294,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Butterfly detector using CNN</h5>
                 <p class="small text-muted mb-0">Using CNN transfer learning to detect 11 different species of southern mediterranean butterflies.</p>
+                <div class="project-category" style="background-color: rgb(0, 141, 207); color: wheat">
+                    <p>Deep Learning</p>
+                </div>                 
               </div>
             </div>
         </div>
@@ -269,6 +311,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">Using NLP on Job Descriptions</h5>
                 <p class="small text-muted mb-0">NLP models were developed in order to detect skills, knowledge, minimum experience and levels (degree) in job descriptions. </p>
+                <div class="project-category" style="background-color: rgb(0, 141, 207); color: wheat">
+                    <p>Deep Learning</p>
+                </div>                 
               </div>
             </div>
         </div>
@@ -281,8 +326,11 @@
                   <img src="https://user-images.githubusercontent.com/62621924/147284141-995f4628-bd49-4e75-be52-53717efe0554.png" alt="" class="img-fluid card-img-top">
                 </a>    
               <div class="p-4">
-                <h5 class="title-img-gallery">Tkinter GUI to be used as a repository for plants and mushrooms.</h5>
+                <h5 class="title-img-gallery">Tkinter GUI to be used as a repository for plants and mushrooms</h5>
                 <p class="small text-muted mb-0">The user can easily look for species, families and properties and customize the GUI as he wants, by adding/removing species.</p>
+                <div class="project-category" style="background-color: rgb(236, 173, 47); color: rgb(0, 0, 0)">
+                    <p>GUI Development</p>
+                </div>                    
               </div>
             </div>
         </div>
@@ -297,6 +345,9 @@
               <div class="p-4">
                 <h5 class="title-img-gallery">BTC, ETH, STEEM and HIVE analysis using Python (from 2020 to 2021).</h5>
                 <p class="small text-muted mb-0">Crypto Market study of BTC, ETH, STEEM and HIVE, from 2020 to 2021 (one full year). The main goal of this analysis, is to make a comparison of these four cryptocurrencies, using several python libraries and statistical analysis.</p>
+                <div class="project-category" style="background-color: rgb(197, 207, 0); color: rgb(0, 0, 0)">
+                    <p>Data Analysis</p>
+                </div>                   
               </div>
             </div>
         </div>
@@ -304,7 +355,7 @@
 </div>
 
 <!-- contact section -->
-<div class="colored-section" id="contact">
+<div class="colored-section fade-in" id="contact">
     <div class="other-header">
         <h1 class="other-title">Contact</h1>
     </div>

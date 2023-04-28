@@ -188,6 +188,7 @@
     padding-left: 10px;
     margin-top: 3%;
     margin-bottom: 3%;
+    filter: drop-shadow(1px 3px 5px rgb(0 0 0 / 0.4));
 }
 
 .material-symbols-outlined.md-30 {
@@ -273,10 +274,14 @@
 .about-section {
     position: static;
     min-height: 80vh;
+
 }
 
 .colored-section {
     background-color: #f5deb33b;
+    height: 100vh;
+    align-items: center;
+    margin:auto;
 }
 
 /* Form */
@@ -364,8 +369,10 @@
 /* others */
 
 .other-header {
+    align-items: center;
     text-align: center;
     padding: 5%;
+    margin: 0 auto;
 }
 
 .other-title {
@@ -395,3 +402,72 @@
         -webkit-transform-origin:0 0;
         }
     }
+
+.p-4 {
+    padding-bottom: 3%!important;
+}
+
+.project-category {
+    text-align: center;
+    font-size: smaller;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 4%;
+    padding: 1px 10px 1px 10px;
+    border-radius: 25px;
+    box-shadow: 2px 3px 9px 0px #4b5563;
+}
+
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+  }
+}
