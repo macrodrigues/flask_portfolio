@@ -3,12 +3,9 @@ from flask import Flask, render_template, request
 from flask_recaptcha import ReCaptcha  # Import ReCaptcha object
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from dotenv import load_dotenv
 import os
 import smtplib
 import datetime as dt
-
-load_dotenv(os.path.join(os.path.dirname(__file__), 'keys.env'))
 
 OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
