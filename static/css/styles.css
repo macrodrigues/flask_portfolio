@@ -1,3 +1,22 @@
+/* define fonts */
+
+@font-face {
+    font-family: 'bellota';
+    src: url('fonts/BellotaText-Light.ttf') format('truetype');
+  }
+
+
+@font-face {
+    font-family: 'fredoka-light';
+    src: url('fonts/Fredoka-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'zen-kurenaido';
+    src: url('fonts/ZenKurenaido-Regular.ttf') format('truetype');
+} 
+  
+
 /* navbar */
 
 .navbar {
@@ -30,7 +49,7 @@
 
 .navbar-dark .navbar-brand {
     color: #f5deb3;
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'fredoka-light', sans-serif;
     font-size: clamp(15px, 1.7vw, 30px);
     /* position: fixed;
     font-weight: 800;
@@ -75,13 +94,13 @@
 }
 
 .h1-header {
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'zen-kurenaido', sans-serif;
     font-size: 4vw;
     font-weight: 800;
 }
 
 .h4-header {
-    font-family: 'Bellota Text', cursive;
+    font-family: 'bellota', sans-serif;
     font-style: italic;
     font-weight: bold;
     font-size: 1.2vw;
@@ -102,7 +121,7 @@
 .about-title {
     font-size: 250%;
     margin-top: 2%;
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'zen-kurenaido', sans-serif;
     font-weight: 1000;
     color: black;
 }
@@ -138,7 +157,7 @@
 }
 
 .title-progress {
-    font-family: 'Bellota Text', cursive;
+    font-family: 'bellota', sans-serif;
     font-weight: 1000;
     color: rgb(75, 75, 75);
 }
@@ -222,7 +241,7 @@
 }
 
 .subtitle {
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'zen-kurenaido', sans-serif;
     font-size: 20px;
     font-weight: 900;
 }
@@ -259,7 +278,7 @@
 
 
 .title-img-gallery {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'fredoka-light', sans-serif;
     font-weight: bolder;
 }
 
@@ -377,7 +396,7 @@
 
 .other-title {
     font-size: 250%;
-    font-family: 'Zen Kurenaido', sans-serif;
+    font-family: 'zen-kurenaido', sans-serif;
     font-weight: 1000;
     color: black;
 }
