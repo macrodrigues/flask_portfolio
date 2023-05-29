@@ -1,6 +1,7 @@
 """This script launches the Flask server and renders the portfolio page."""
 from flask import Flask, render_template, request
 from flask_recaptcha import ReCaptcha  # Import ReCaptcha object
+from flask_compress import Compress
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
@@ -10,7 +11,10 @@ import datetime as dt
 OWN_EMAIL = os.getenv('mail')
 OWN_PASSWORD = os.getenv('pass')
 
+
 app = Flask(__name__)
+compress = Compress()
+compress.init_app(app)
 app.config['RECAPTCHA_SITE_KEY'] = \
     os.getenv('key_site')  # <-- Add your site key
 app.config['RECAPTCHA_SECRET_KEY'] = \
