@@ -235,7 +235,8 @@
     display: block;
     padding-left: 10%;
     padding-right: 10%;
-    font-family: 'Bellota Text', cursive;
+    font-family: 'bellota', sans-serif;
+    font-weight: 600;
     font-style: italic;
     font-size: 10px;
 }
