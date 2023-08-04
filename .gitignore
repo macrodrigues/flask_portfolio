@@ -1,4 +1,8 @@
 __pycache__
 .vscode
 keys.env
-
+Dockerfile
+package-lock.json
+start.sh
+tailwinf.config.js
+build_logs.txt

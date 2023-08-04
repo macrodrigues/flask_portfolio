@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block container %}
+
 <!-- Navbar -->
 <nav class="navbar navbar-custom navbar-expand-lg bg-gray-800 navbar-dark fixed-top">
     <a href="#"><p class="navbar-brand navbar-dark font-mono">Marco Rodrigues</p></a>
@@ -10,16 +11,13 @@
     <div class="collapse navbar-collapse navbar-default" id="navbarTogglerDemo02" style="visibility:inherit">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="https://discord.gg/ZTNAp4qZYX" target="_blank" class="nav-link nav-link-special">New</a>
-            </li>
-            <li class="nav-item">
                 <a href="#skills" class="nav-link">Skills</a>
             </li>
             <li class="nav-item">
                 <a href="#projects" class="nav-link">Projects</a>
             </li>
             <li class="nav-item">
-                <a href="https://www.medium.com/@macrodrigues" class="nav-link">Blog</a>
+                <a href="https://www.medium.com/@macrodrigues" target="_blank" class="nav-link">Blog</a>
             </li>
             <li class="nav-item">
                 <a href="#contact" class="nav-link">Contact</a>
@@ -31,10 +29,6 @@
 <div class="bg-image">
     <div class="mask">
         <div class="d-flex h-100">
-            <div class="text-white">
-                <h1 class="mb-3 h1-header">A breeze of my work</h1>
-                <h4 class="mb-3 h4-header">Tales of a Software Engineer and Python Developer</h4>
-            </div>
             <div class="profile-pic">
                 <img src="static/images/profile-pic.webp" alt="" style="border-radius: 50%;">
             </div>
@@ -48,7 +42,15 @@
             <h1 class="about-title">About</h1>
             <div class="about-text">
                 <p>
-                    With over 3 years of engineering experience, I can tag myself as a builder. With a Masters in Nanotechnology and Microelectronics, it took me a few years to understand that the easiest and fastest way to build is with a simple laptop. Today, I'm mostly a Software Engineer highly focused on Python and AI. The change was progressive, early on, I was learning Python after my working hours, the pandemic kinda of helped me to have more time to dive into it. Later on, I got a job where I mixed microelectronics and programming. And finally, I decided to learn more about this new world of Machine Learning and Deep Learning, so I enrolled in a Data Science bootcamp. A delightful experience that gave me the key skills to pursue a career as a developer. Not long after, I got a job in French Guiana. I packed up the essentials, and flew to the Amazon rainforest to work as a Software Engineer at the European Spaceport. Nature gave me the breeze I needed to keep building, and being creative.
+                    With over 3 years of engineering experience, I can tag myself as a builder. With a Masters in Nanotechnology and
+                    Microelectronics, it took me a few years to understand that the easiest and fastest way to build is with a simple
+                    laptop. Now, I am a Software Engineer passionately dedicated to Data Science, AI, and Web3 technologies. The change was
+                    progressive, early on, I was learning Python after my working hours, then the pandemic came, and I got more time to dive
+                    into it. Along the way, I landed a job that combined microelectronics and programming. And the time came, to enroll in a
+                    Data Science bootcamp that equipped me with the essential skills to excel as a developer. Shortly after, an opportunity
+                    arose to work as a Software Engineer in French Guiana. I packed up the essentials, and I flew to the Amazon rainforest
+                    to work as a Software Engineer at the European Spaceport. Nature gave me the breeze I needed to keep building, and being
+                    creative.
                 </p>
             </div>
         </div>
@@ -75,50 +77,49 @@
         </div>
     </div>
     <div class="icons-about-container">
-        <div class="row">
-            <div class="icon-about-container">
-                <h3 class="subtitle">Find me here</h3>
-                <div class="icon-about-align" style="margin-top:4%">
-                    <p class="p-img-icon">
-                        <a href="https://www.linkedin.com/in/macrodrigues" target="_blank">
-                            <img alt="linkedin" target="_blank" width="50x" src="static/images/icons/linkedin.svg" class="img-icon" />
-                        </a>
-                    </p>
-                    <p class="p-img-icon">
-                        <a href="https://medium.com/@macrodrigues" target="_blank">
-                            <img alt="linkedin" target="_blank" width="70px" src="static/images/icons/medium.svg" class="img-icon" />
-                        </a>
-                    </p>
-                    <p class="p-img-icon">
-                        <a href="https://github.com/macrodrigues" target="_blank">
-                            <img alt="github" target="_blank" width="50px" src="static/images/icons/github.svg" class="img-icon" />
-                        </a>
-                    </p>
-                    <p class="p-img-icon">
-                      <a href="https://unsplash.com/@macrodrigues" target="_blank">
-                        <img alt="unsplash" target="_blank" width="50px" src="static/images/icons/unsplash.svg" class="img-icon" />
-                      </a>
-                    </p>
-                    <p class="p-img-icon">
-                      <a href="https://discord.gg/ZHSbkkYh" target="_blank">
-                        <img alt="discord" target="_blank" width="50px" src="static/images/icons/discord.svg" class="img-icon" />
-                      </a>
-                    </p>
-                </div>
-            </div>
+      <div class="row">
+        <div class="icon-about-container">
+          <h3 class="subtitle">Find me here</h3>
+          <div class="icon-about-align" style="margin-top:4%">
+            <p class="p-img-icon">
+              <a href="https://www.linkedin.com/in/macrodrigues" target="_blank">
+                <img alt="linkedin" target="_blank" width="40x" src="static/images/icons/linkedin.svg" class="img-icon" />
+              </a>
+            </p>
+            <p class="p-img-icon">
+              <a href="https://medium.com/@macrodrigues" target="_blank">
+                <img alt="linkedin" target="_blank" width="60px" src="static/images/icons/medium.svg" class="img-icon" />
+              </a>
+            </p>
+            <p class="p-img-icon">
+              <a href="https://github.com/macrodrigues" target="_blank">
+                <img alt="github" target="_blank" width="40px" src="static/images/icons/github.svg" class="img-icon" />
+              </a>
+            </p>
+            <p class="p-img-icon">
+              <a href="https://unsplash.com/@macrodrigues" target="_blank">
+                <img alt="unsplash" target="_blank" width="40px" src="static/images/icons/unsplash.svg" class="img-icon" />
+              </a>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
 </section>
 <!--skills section-->
 <div class="colored-section" id="skills">
     <div class="other-header">
-        <h1 class="other-title">Skills</h1>
+        <h1 class="other-title">Skills & Expertise</h1>
         <div class="icons-container">
             <div class="row">
                 <div class="icon-container">
                     <div class="icon-align">
                         <i class="material-symbols-outlined md-100">equalizer</i>
                         <span class="caption-icon">Data Analysis, Data Visualization, Dashbords (pandas, plotly, dash, ...)</span>
+                    </div>
+                    <div class="icon-align">
+                      	<i class="material-symbols-outlined md-100">edit_square</i>
+                        <span class="caption-icon">Technical Writing, Documentation, Reports</span>
                     </div>
                     <div class="icon-align">
                         <i class="material-symbols-outlined md-100">dvr</i>
@@ -133,15 +134,23 @@
         </div>
         <div class="prog-bars">
             <div class="prog-bar">
-                <h4 class="title-progress">Data Analysis</h4>
+                <h4 class="title-progress">Data Science & Data Analysis</h4>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                    style="width:85%">
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Python Scripting</h4>
+                <h4 class="title-progress">Web Scraping</h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
+                    aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                    </div>
+                </div>
+            </div>
+            <div class="prog-bar">
+                <h4 class="title-progress">Automation with Python</h4>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="80"
                     aria-valuemin="0" aria-valuemax="100" style="width:70%">
@@ -149,18 +158,18 @@
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Data Science</h4>
+                <h4 class="title-progress">Technical Writing</h4>
                 <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                      style="width:70%">
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Web Development</h4>
+                <h4 class="title-progress">UX/UI & Web Development</h4>
                 <div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                    aria-valuemin="0" aria-valuemax="100" style="width:50%">
                     </div>
                 </div>
             </div>
@@ -170,10 +179,43 @@
 <!--Projects Section-->
 <div id="projects">
     <div class="other-header">
-        <h1 class="other-title">Projects</h1>
+        <h1 class="other-title" style="color: black;">Projects</h1>
     </div>
     <div>
       <div class="row fade-in">
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <a
+              href="https://medium.com/ai-in-plain-english/langchain-and-pinecone-unpack-crypto-news-with-openai-and-hugging-face-models-838c1e858bb6">
+              <img src="static/images/projects/langchain.webp" target="_blank" alt="" class="img-fluid card-img-top">
+            </a>
+            <div class="p-4">
+              <h5 class="title-img-gallery">Langchain and Pinecone for semantic search </h5>
+              <p class="small text-muted mb-0">Use Langchain and Pinecone to feed LLMs from Hugging Face and OpenAI. </p>
+              <div class="project-category" style="background-color: rgba(136, 32, 192, 0.856); color: wheat">
+                <p>Prompt Engineering</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery item -->
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+          <div class="bg-white rounded shadow-sm">
+            <a href="https://medium.com/datadriveninvestor/iot-on-the-move-how-connected-devices-are-preventing-transportation-risks-a9117333cd73">
+              <img src="static/images/projects/transportation.webp" target="_blank" alt="" class="img-fluid card-img-top">
+            </a>
+            <div class="p-4">
+              <h5 class="title-img-gallery">Transport Risk Mitigation with Machine Learning</h5>
+              <p class="small text-muted mb-0">EDA and ML models on to Prevent Transportation Risks with IoT data. </p>
+              <div class="project-category" style="background-color: rgba(192, 32, 32, 0.856); color: wheat">
+                <p>Machine Learning</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Gallery item -->
         <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
@@ -336,7 +378,7 @@
                   <img src="static/images/projects/skills_matcher.webp" target="_blank" alt="" class="img-fluid card-img-top">
                 </a>
               <div class="p-4">
-                <h5 class="title-img-gallery">Using NLP on Job Descriptions</h5>
+                <h5 class="title-img-gallery">Using NLP on Job Descriptions with a NER Model</h5>
                 <p class="small text-muted mb-0">NER model developed with Spacy to detect key words in job descriptions. </p>
                 <div class="project-category" style="background-color: rgb(0, 141, 207); color: wheat">
                     <p>Deep Learning</p>
@@ -384,7 +426,7 @@
 <!-- contact section -->
 <div class="colored-section fade-in" id="contact">
     <div class="other-header">
-        <h1 class="other-title">Contact</h1>
+        <h1 class="other-title">Ask for quotation</h1>
     </div>
     <div class="contact-container">
         <form action="/submit" method="post" class="contact-form" accept-charset="utf-8">
@@ -419,7 +461,10 @@
         </form>
     </div>
 </div>
-<footer style="background-color: #f5deb33b; padding-top: 3%;">
-    <p>Still running in {{year}}. Built with &#129505 by Me.</p>
-</footer>
+<div class="footer-section" >
+    <footer>
+      <p>Running in {{year}} and beyond. Built with &#129505 by Me.</p>
+    </footer>
+</div>
+
 {% endblock %}

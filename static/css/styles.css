@@ -1,10 +1,8 @@
 /* define fonts */
-
 @font-face {
     font-family: 'bellota';
     src: url('fonts/BellotaText-Light.ttf') format('truetype');
   }
-
 
 @font-face {
     font-family: 'fredoka-light';
@@ -14,19 +12,45 @@
 @font-face {
     font-family: 'zen-kurenaido';
     src: url('fonts/ZenKurenaido-Regular.ttf') format('truetype');
-} 
-  
+}
+
+@font-face {
+  font-family: 'martel';
+  src: url('fonts/Martel-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'martel-bold';
+  src: url('fonts/Martel-Bold.ttf') format('truetype');
+}
 
 /* navbar */
 
+/* .fixed-top {
+  position: absolute;
+} */
+
+.bg-gray-800 {
+  background-color: rgb(255, 255, 255) !important;
+}
+
 .navbar {
-    box-shadow: -8px -15px 6px 16px rgb(0 0 0);
     min-width: 80px;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+.nav-item {
+  font-family: 'martel', sans-serif;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #f5deb3;
+    color:  #6e8923;
+}
 
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
 }
 
 .nav-link-special {
@@ -38,7 +62,7 @@
 }
 
 .nav-link-special:hover {
-    color: #f5deb3;
+    color: #ffffff;
     font-weight: 500;
 }
 
@@ -48,38 +72,32 @@
   }
 
 .navbar-dark .navbar-brand {
-    color: #f5deb3;
-    font-family: 'fredoka-light', sans-serif;
-    font-size: clamp(15px, 1.7vw, 30px);
-    /* position: fixed;
-    font-weight: 800;
-    padding: 0 15px;
-    height: 40px; */
+    color: #ffffff;
+    font-family: 'martel-bold', sans-serif;
+    font-size: clamp(25px, 1.7vw, 33px);
+    margin-left: 6%;
+    padding-top: 5%;
+}
+
+
+.navbar-dark .navbar-brand:hover {
+    color: #6e8923;
+}
+
+.ml-auto {
+  margin-right: 1% !important;
 }
 
 /* About */
-
 .bg-image {
-    background-image: url(../images/img-header.webp);
-    margin-top: 55px;
-    background-position: center;
+    background-image: url(../images/img-header-2.webp);
+    background-position: 0px -56%;
     background-size: cover;
-    height: 11vw;
+    /* margin-top: 25px; */
+    height: 14vw;
     box-shadow: -8px -15px 6px 16px rgb(0 0 0);
     }
 
-
-@media only screen and (max-width: 290px) {
-.text-white {
-    display: none;
-    }
-}
-
-/* @media only screen and (max-width: 306px) {
-.navbar-dark .navbar-brand {
-    display: none;
-    }
-} */
 
 @media only screen and (max-width: 544px) {
     .h4-header {
@@ -87,17 +105,6 @@
         }
     }
 
-.text-white {
-    margin-top: 0.5%;
-    padding: 0.5%;
-    max-height: 220px;
-}
-
-.h1-header {
-    font-family: 'zen-kurenaido', sans-serif;
-    font-size: 4vw;
-    font-weight: 800;
-}
 
 .h4-header {
     font-family: 'bellota', sans-serif;
@@ -108,9 +115,9 @@
 }
 
 .profile-pic {
-    margin-top: 1%;
-    margin-left: 27%;
-    width: 13%;
+    margin-top: 5.7%;
+    margin-left: 81.5%;
+    width: 15%;
     height: 13%;
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
@@ -121,7 +128,7 @@
 .about-title {
     font-size: 250%;
     margin-top: 2%;
-    font-family: 'zen-kurenaido', sans-serif;
+    font-family: 'martel-bold', sans-serif;
     font-weight: 1000;
     color: black;
 }
@@ -133,14 +140,14 @@
 .about-text{
     margin-left: 21%;
     margin-right: 21%;
-    margin-top: 1.5%;
+    margin-top: 0.5%;
     text-align: justify;
 }
 
 /* skills section */
 
 .prog-bars {
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 12%;
     margin-left: 35%;
     margin-right: 35%;
@@ -149,7 +156,7 @@
 }
 
 .prog-bar {
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .progress {
@@ -159,11 +166,11 @@
 .title-progress {
     font-family: 'bellota', sans-serif;
     font-weight: 1000;
-    color: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
 }
 
 .progress-bar {
-    background-color: #f9cf80;
+    background-color: #acd051;
 }
 
 .icons-container {
@@ -179,6 +186,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-bottom: 3%;
 }
 
 .langs-icons-about-container {
@@ -196,7 +204,7 @@
     'GRAD' 0,
     'opsz' 48;
     font-size: 100px;
-    color: rgb(85, 85, 85);
+    color: rgb(104 132 34);
     vertical-align: middle;
     display: inline-block;
 }
@@ -207,7 +215,17 @@
     padding-left: 10px;
     margin-top: 3%;
     margin-bottom: 3%;
-    filter: drop-shadow(1px 3px 5px rgb(0 0 0 / 0.4));
+    /* filter: drop-shadow(1px 3px 5px rgb(0 0 0 / 0.4)); */
+}
+
+.p2-img-icon {
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    -webkit-filter: invert(100%);
+    /* filter: drop-shadow(1px 3px 5px rgb(0 0 0 / 0.4)); */
 }
 
 .material-symbols-outlined.md-30 {
@@ -217,7 +235,7 @@
     'GRAD' 0,
     'opsz' 48;
     font-size: 30px;
-    color: rgb(85, 85, 85);
+    color: rgb(137, 163, 52);
     vertical-align: middle;
     display: inline-block;
 }
@@ -239,17 +257,18 @@
     font-weight: 600;
     font-style: italic;
     font-size: 10px;
+    color: #6e8923;
 }
 
 .subtitle {
-    font-family: 'zen-kurenaido', sans-serif;
+    font-family: 'martel', sans-serif;
     font-size: 20px;
     font-weight: 900;
 }
 
 .img-icon {
     /* filter: opacity(0.1) drop-shadow(0 0 0 rgb(0, 0, 0)); */
-    filter: opacity(0.4) grayscale(100%);
+    filter: grayscale(100%);
 }
 
 .img-icon:hover {
@@ -298,7 +317,7 @@
 }
 
 .colored-section {
-    background-color: #f5deb33b;
+    background-color: #121409;
     height: 100vh;
     align-items: center;
     margin:auto;
@@ -334,7 +353,7 @@
 
 .contact-label-input {
     font-size: 15px;
-    color: #000000;
+    color: #ffffff;
     line-height: 1.2;
     text-align: right;
 }
@@ -353,7 +372,7 @@
 .submit-container {
     position: relative;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     margin-left: 0vw;
 }
@@ -397,9 +416,9 @@
 
 .other-title {
     font-size: 250%;
-    font-family: 'zen-kurenaido', sans-serif;
+    font-family: 'martel', sans-serif;
     font-weight: 1000;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .row {
@@ -447,6 +466,22 @@
     -o-animation: fadeIn ease 3s;
     -ms-animation: fadeIn ease 3s;
   }
+
+
+.footer-section {
+    background-color: #121409;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    flex: 1;
+    padding-top: 10%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    color: white;
+}
+
   @keyframes fadeIn {
     0% {
       opacity:0;
@@ -455,7 +490,7 @@
       opacity:1;
     }
   }
-  
+
   @-moz-keyframes fadeIn {
     0% {
       opacity:0;
@@ -464,7 +499,7 @@
       opacity:1;
     }
   }
-  
+
   @-webkit-keyframes fadeIn {
     0% {
       opacity:0;
@@ -473,7 +508,7 @@
       opacity:1;
     }
   }
-  
+
   @-o-keyframes fadeIn {
     0% {
       opacity:0;
@@ -482,7 +517,7 @@
       opacity:1;
     }
   }
-  
+
   @-ms-keyframes fadeIn {
     0% {
       opacity:0;
