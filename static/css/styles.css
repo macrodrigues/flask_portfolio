@@ -74,7 +74,7 @@
 .navbar-dark .navbar-brand {
     color: #ffffff;
     font-family: 'martel-bold', sans-serif;
-    font-size: clamp(25px, 1.7vw, 33px);
+    font-size: clamp(15px, 1.7vw, 30px);
     margin-left: 6%;
     padding-top: 5%;
 }
@@ -166,6 +166,7 @@
 .title-progress {
     font-family: 'bellota', sans-serif;
     font-weight: 1000;
+    font-size: clamp(12px, 1.7vw, 30px);
     color: rgb(255, 255, 255);
 }
 
@@ -203,7 +204,7 @@
     'wght' 400,
     'GRAD' 0,
     'opsz' 48;
-    font-size: 100px;
+    font-size: clamp(100px, 1.7vw, 50px);
     color: rgb(104 132 34);
     vertical-align: middle;
     display: inline-block;
@@ -262,7 +263,6 @@
 
 .subtitle {
     font-family: 'martel', sans-serif;
-    font-size: 20px;
     font-weight: 900;
 }
 
@@ -318,7 +318,7 @@
 
 .colored-section {
     background-color: #121409;
-    height: 100vh;
+    /* height: 100vh; */
     align-items: center;
     margin:auto;
 }
@@ -416,6 +416,7 @@
 
 .other-title {
     font-size: 250%;
+    /* font-size: clamp(40px, 1.5vw, 20px); */
     font-family: 'martel', sans-serif;
     font-weight: 1000;
     color: rgb(255, 255, 255);
@@ -476,7 +477,7 @@
 
 footer {
     flex: 1;
-    padding-top: 10%;
+    /* padding-top: 10%; */
     padding-bottom: 1%;
     padding-left: 1%;
     color: white;
