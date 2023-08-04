@@ -74,7 +74,7 @@
 .navbar-dark .navbar-brand {
     color: #ffffff;
     font-family: 'martel-bold', sans-serif;
-    font-size: clamp(15px, 1.7vw, 30px);
+    font-size: clamp(10px, 1.7vw, 30px);
     margin-left: 6%;
     padding-top: 5%;
 }
