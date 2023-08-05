@@ -40,6 +40,24 @@
     background-color: transparent !important;
 }
 
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    background-color: #121409 !important;
+  }
+  .bg-image {
+    margin-top: 4vw;
+  }
+}
+
+@media only screen and (max-width: 544px) {
+  .profile-pic {
+    margin-top: 6% !important;
+  }
+  .bg-image {
+    margin-top: 60px;
+  }
+}
+
 .nav-item {
   font-family: 'martel', sans-serif;
 }
@@ -115,9 +133,9 @@
 }
 
 .profile-pic {
-    margin-top: 5.7%;
-    margin-left: 81.5%;
-    width: 15%;
+    margin-top: 3.7%;
+    margin-left: 77.5%;
+    width: 16%;
     height: 13%;
     border-radius: 50%;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
