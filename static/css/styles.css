@@ -51,10 +51,12 @@
 
 @media only screen and (max-width: 544px) {
   .profile-pic {
-    margin-top: 6% !important;
+    margin-top: 10vw !important;
+    width: 18vw !important;
   }
   .bg-image {
-    margin-top: 60px;
+    height: 24vw !important;
+    background-position: 0px -30vw !important;
   }
 }
 
