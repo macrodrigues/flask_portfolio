@@ -551,9 +551,13 @@ footer {
   .about-title {
     font-size: 25px !important;
   }
-  .p-4 {
-    height: 180px !important;
-  }
+
+}
+
+@media only screen and (max-width: 300px) {
+    .p-4 {
+      height: 180px !important;
+    }
 }
 
 @media screen and (max-height: 767px) {
