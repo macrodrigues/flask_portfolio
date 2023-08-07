@@ -429,16 +429,17 @@
 
 .p-4 {
     padding-bottom: 3%!important;
+    height: 120px!important;
+}
+
+.bg-white{
+  padding-bottom: 30px;
 }
 
 .project-category {
-    text-align: center;
     font-size: smaller;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    margin: 2% auto -4%;
     width: fit-content;
-    margin-top: 4%;
     padding: 1px 10px 1px 10px;
     border-radius: 25px;
     box-shadow: 2px 3px 9px 0px #4b5563;
@@ -549,6 +550,9 @@ footer {
 
   .about-title {
     font-size: 25px !important;
+  }
+  .p-4 {
+    height: 180px !important;
   }
 }
 
