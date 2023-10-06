@@ -302,6 +302,27 @@
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
+.go-to-blogs {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.blog-label {
+  padding: 2%;
+  font-size: larger;
+  font-family: 'fredoka-light', sans-serif;
+  font-weight: bolder;
+}
+
+.blog-label-link:link {
+  text-decoration: none;
+}
+
+.blog-label-link:hover {
+  color: #acd051;
+}
+
 /* Sections*/
 
 .about-section {
