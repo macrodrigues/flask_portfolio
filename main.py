@@ -62,4 +62,4 @@ def send_email(name, email, phone, message):
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.config['RECAPTCHA_SIZE'] = 'compact'
-    app.run(port=5000, host='0.0.0.0',debug=True)
+    app.run(port=6000, host='0.0.0.0', debug=True)
