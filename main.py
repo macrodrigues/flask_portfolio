@@ -19,7 +19,7 @@ app.config['RECAPTCHA_SITE_KEY'] = \
     os.getenv('key_site')  # <-- Add your site key
 app.config['RECAPTCHA_SECRET_KEY'] = \
     os.getenv('key_secret')  # <-- Add your secret key
-recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
+# recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
 
 
 @app.route("/")
@@ -62,4 +62,4 @@ def send_email(name, email, phone, message):
 if __name__ == '__main__':
     app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.config['RECAPTCHA_SIZE'] = 'compact'
-    app.run(port=int(os.environ.get("PORT", 8080)), host='0.0.0.0', debug=True)
+    app.run(port=5000, host='0.0.0.0', debug=True)
