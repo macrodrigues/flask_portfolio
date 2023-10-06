@@ -19,7 +19,7 @@ app.config['RECAPTCHA_SITE_KEY'] = \
     os.getenv('key_site')  # <-- Add your site key
 app.config['RECAPTCHA_SECRET_KEY'] = \
     os.getenv('key_secret')  # <-- Add your secret key
-recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
+# recaptcha = ReCaptcha(app)  # Create a ReCaptcha object
 
 
 @app.route("/")
