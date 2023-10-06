@@ -45,7 +45,7 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color:  #6e8923;
+    color: #ddfe32;
 }
 
 
@@ -62,7 +62,7 @@
 }
 
 .nav-link-special:hover {
-    color: #ffffff;
+    color: #ddfe32;
     font-weight: 500;
 }
 
@@ -72,7 +72,7 @@
   }
 
 .navbar-dark .navbar-brand {
-    color: #ffffff;
+    color: #ddfe32;
     font-family: 'martel-bold', sans-serif;
     font-size: clamp(10px, 1.7vw, 30px);
     margin-left: 6%;
@@ -81,7 +81,7 @@
 
 
 .navbar-dark .navbar-brand:hover {
-    color: #6e8923;
+    color: #ffffff;
 }
 
 .ml-auto {
@@ -90,7 +90,7 @@
 
 /* About */
 .bg-image {
-    background-image: url(../images/portfolio_cover.webp);
+    background-image: url(../images/test_cover.png);
     background-position: 0px -56%;
     background-size: cover;
     /* margin-top: 25px; */
@@ -140,7 +140,7 @@
 /* skills section */
 
 .prog-bars {
-    margin-top: 1%;
+    margin-top: 4%;
     margin-bottom: 12%;
     margin-left: 35%;
     margin-right: 35%;
@@ -168,6 +168,7 @@
 }
 
 .icons-container {
+    margin-top: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,6 +356,7 @@
     border: 1px solid #7c7c7c;
     width: 50vw;
     height: calc(1.5em + 0.75rem + 2%);
+    border-radius: 8px;
 }
 
 .form-control:focus {
@@ -521,7 +523,7 @@ footer {
   }
 
   .bg-image {
-    margin-top: 4vw;
+    margin-top: 6vw;
   }
 }
 
@@ -533,7 +535,7 @@ footer {
 
   .bg-image {
     height: 25vw !important;
-    background-position: 0px -27vw !important;
+    background-position: 0px -19vw !important;
   }
 
   .project-category {
