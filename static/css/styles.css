@@ -338,6 +338,12 @@
     margin:auto;
 }
 
+.btn-secondary {
+  color: #fff;
+  background-color: #121409;
+  border-color: #121409;
+}
+
 /* Form */
 
 .contact-container {
