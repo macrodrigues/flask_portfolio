@@ -36,18 +36,17 @@ def receive_data():
         if recaptcha.verify():
             name = request.form["name"]
             mail = request.form["mail"]
-            phone = request.form["phone"]
             message = request.form["message"]
-            send_email(name, mail, phone, message)
+            send_email(name, mail, message)
             return render_template('submission.html')
         else:
             return render_template('index.html')
 
 
-def send_email(name, email, phone, message):
+def send_email(name, email, message):
     """Send email to my personal account with smtp."""
     email_message = \
-        f"Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage:{message}"
+        f"Name: {name}\nEmail: {email}\nMessage:{message}"
     msg = MIMEMultipart()
     msg['To'] = OWN_EMAIL
     msg['Subject'] = 'Contact Portfolio'
