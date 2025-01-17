@@ -6,3 +6,5 @@ package-lock.json
 start.sh
 tailwinf.config.js
 build_logs.txt
+test_email.ipynb
+

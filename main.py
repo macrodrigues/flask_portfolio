@@ -44,15 +44,19 @@ def receive_data():
 
 
 def send_email(name, email, message):
-    """Send email to my personal account with smtp."""
+    """Send email using Gmail SMTP."""
     email_message = \
         f"Name: {name}\nEmail: {email}\nMessage:{message}"
     msg = MIMEMultipart()
+    msg['From'] = OWN_EMAIL
     msg['To'] = OWN_EMAIL
     msg['Subject'] = 'Contact Portfolio'
     msg.attach(MIMEText(email_message, "plain"))
     text = msg.as_string()
-    with smtplib.SMTP(host='smtp-mail.outlook.com', port=587) as connection:
+    
+    # Using Gmail SMTP
+    with smtplib.SMTP('smtp.gmail.com', 587) as connection:
+        connection.ehlo()
         connection.starttls()
         connection.login(OWN_EMAIL, OWN_PASSWORD)
         connection.sendmail(OWN_EMAIL, OWN_EMAIL, text)
