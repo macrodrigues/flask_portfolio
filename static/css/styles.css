@@ -504,58 +504,6 @@
   }
 }
 
-/* media */
-
-@media only screen and (max-width: 1000px) {
-  .bg-image {
-    margin-top: 6vw;
-  }
-}
-
-@media only screen and (max-width: 544px) {
-  .profile-pic {
-    margin-top: 10vw !important;
-    width: 18vw !important;
-  }
-
-  .bg-image {
-    height: 25vw !important;
-    background-position: 0px -19vw !important;
-  }
-
-  .project-category {
-    font-size: 10px !important;
-  }
-
-  .h4-header {
-    display: none;
-  }
-
-  .other-title {
-    font-size: 25px !important;
-  }
-
-  .about-title {
-    font-size: 25px !important;
-  }
-
-}
-
-@media only screen and (max-width: 300px) {
-    .p-4 {
-      height: 180px !important;
-    }
-}
-
-@media screen and (max-height: 767px) {
-  .g-recaptcha {
-    transform: scale(0.77);
-    -webkit-transform: scale(0.77);
-    transform-origin: 0 0;
-    -webkit-transform-origin: 0 0;
-  }
-}
-
 /* Projects Grid */
 .projects-grid {
     display: grid;
@@ -606,3 +554,525 @@
         gap: 30px;
     }
 }
+
+/* Upwork CTA Styling */
+.upwork-cta-section {
+  background-color: #252525;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.upwork-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.upwork-cta-container h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.upwork-cta-container p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.upwork-cta-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #6fda44;
+  color: #000;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.upwork-cta-button:hover {
+  background-color: #5dc234;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: #000;
+}
+
+.upwork-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.upwork-benefits {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Modern Footer Styling */
+.modern-footer {
+  background: #252525;
+  color: #ffffff;
+  padding: 60px 0 20px;
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #ffeeaa;
+}
+
+.footer-brand p {
+  font-family: 'Fira Code', monospace;
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-social h4 {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+  background: rgba(255, 238, 170, 0.2);
+  border-color: #ffeeaa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 238, 170, 0.3);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-link:hover img {
+  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-family: 'Fira Code', monospace;
+  color: #888888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Modern Blog Button Styling */
+.modern-blog-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffeeaa;
+  color: #1a1a1a;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 238, 170, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.modern-blog-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 238, 170, 0.4);
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.modern-blog-button svg {
+  transition: transform 0.3s ease;
+}
+
+.modern-blog-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Testimonials Styling */
+.testimonials-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.testimonial-slider {
+  position: relative;
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 20px;
+  min-height: 200px;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  height: 250px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: auto;
+}
+
+.testimonial-text {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  color: #ccc;
+  text-align: right;
+  font-size: 16px;
+}
+
+.testimonial-author strong {
+  color: white;
+  font-weight: bold;
+}
+
+/* Slider Navigation */
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #555;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #fff;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  
+  /* Skills Section */
+  .colored-section {
+    padding: 40px 20px;
+  }
+  
+  .other-header {
+    padding: 20px 15px;
+  }
+  
+  .other-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .icons-container {
+    margin-top: 5%;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .icon-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .material-symbols-outlined.md-100 {
+    font-size: 60px;
+  }
+  
+  .caption-icon {
+    font-size: 14px;
+    max-width: 250px;
+    line-height: 1.4;
+  }
+  
+  /* Progress Bars */
+  .prog-bars {
+    margin: 5% 10%;
+    width: 80%;
+  }
+  
+  .prog-bar {
+    margin-top: 5%;
+  }
+  
+  .skill-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .title-progress {
+    font-size: 16px;
+  }
+  
+  .skill-percentage {
+    font-size: 14px;
+    align-self: flex-end;
+  }
+  
+  /* Projects Section */
+  #projects {
+    padding: 40px 20px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  
+  .project-card {
+    min-height: 400px;
+  }
+  
+  .project-card .substack-post-embed {
+    height: 400px;
+  }
+  
+  .go-to-blogs {
+    padding: 30px 20px;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-container {
+    padding: 20px 15px;
+  }
+  
+  .testimonial-slider {
+    padding: 20px;
+    min-height: 300px;
+  }
+  
+  .testimonial-slide {
+    height: auto;
+    min-height: 250px;
+  }
+  
+  .testimonial-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .testimonial-author {
+    font-size: 14px;
+  }
+  
+  /* Upwork CTA Section */
+  .upwork-cta-section {
+    padding: 60px 20px;
+  }
+  
+  .upwork-cta-container {
+    padding: 0 15px;
+  }
+  
+  .upwork-cta-container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .upwork-cta-container p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  
+  .upwork-cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+  
+  /* Footer */
+  .modern-footer {
+    padding: 40px 0 20px;
+  }
+  
+  .footer-content {
+    padding: 0 15px;
+  }
+  
+  .footer-section-main {
+    align-items: center !important;
+  }
+  
+  .footer-brand h3 {
+    font-size: 20px;
+  }
+  
+  .footer-brand p {
+    font-size: 12px;
+  }
+  
+  .footer-social h4 {
+    font-size: 16px;
+  }
+  
+  .social-links {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .social-link img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 12px;
+  }
+  
+  /* Blog Button */
+  .modern-blog-button {
+    padding: 14px 24px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  .prog-bars {
+    margin: 5% 20%;
+    width: 60%;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .footer-section-main {
+    align-items: center !important;
+  }      
+  
+  .icon-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  
+  .prog-bars {
+    margin: 5% 5%;
+    width: 90%;
+  }
+  
+  .testimonial-text {
+    font-size: 15px;
+  }
+  
+  .upwork-cta-container h2 {
+    font-size: 20px;
+  }
+  
+  .upwork-cta-container p {
+    font-size: 14px;
+  }
+
+  .footer-section-main {
+    align-items: center !important;
+  }
+}
+
