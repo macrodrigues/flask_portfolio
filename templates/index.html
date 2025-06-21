@@ -2,32 +2,11 @@
 
 {% block container %}
 
-<!-- Navbar -->
-<nav class="navbar navbar-custom navbar-expand-lg bg-gray-800 navbar-dark fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse navbar-default" id="navbarTogglerDemo02" style="visibility:inherit">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a href="https://blog.dadhalfdev.com/" target="_blank" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 <!-- Background image -->
 <div class="bg-image">
     <div class="mask">
         <div class="d-flex h-100">
-            <div class="profile-pic">
-                <img src="static/images/profile-pic.webp" alt="" style="border-radius: 50%;">
-            </div>
+            <img class="profile-pic" src="static/images/profile-pic.webp" alt="" style="border-radius: 50%;">
         </div>
     </div>
 </div>
@@ -35,7 +14,6 @@
 <section class="about-section">
     <div class="about-container">
         <div class="about-header">
-            <h1 class="about-title">About</h1>
             <div class="about-text">
                 <p>                    
                     With <strong>over 5 years of engineering experience</strong>, I can tag myself as a builder. With a <strong>Masters in Nanotechnology and
@@ -83,36 +61,6 @@
             </div>
         </div>
     </div>
-    <div class="icons-about-container">
-      <div class="row">
-        <div class="icon-about-container">
-          <h3 class="subtitle">Find me here</h3>
-          <div class="icon-about-align" style="margin-top:4%">
-            <p class="p-img-icon">
-              <a href="https://www.linkedin.com/in/dadhalfdev" target="_blank">
-                <img alt="linkedin" target="_blank" width="40x" src="static/images/icons/linkedin.svg" class="img-icon" />
-              </a>
-            </p>
-            <p class="p-img-icon">
-                <a href="https://medium.com/@dadhalfdev" target="_blank">
-                  <img alt="medium" target="_blank" width="60px" src="static/images/icons/medium.svg" class="img-icon" />
-                </a>
-              </p>
-            <p class="p-img-icon">
-              <a href="https://github.com/macrodrigues" target="_blank">
-                <img alt="github" target="_blank" width="40px" src="static/images/icons/github.svg" class="img-icon" />
-              </a>
-            </p>
-            <p class="p-img-icon">
-              <a href="https://x.com/dadhalfdev" target="_blank">
-                <img alt="github" target="_blank" width="40px" src="static/images/icons/x_logo.svg" class="img-icon" />
-              </a>
-            </p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 </section>
 <!--skills section-->
 <div class="colored-section" id="skills">
@@ -142,42 +90,68 @@
         </div>
         <div class="prog-bars">
             <div class="prog-bar">
-                <h4 class="title-progress">Data Science & Data Analysis</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                    style="width:85%">
+                <div class="skill-header">
+                    <h4 class="title-progress">Data Science</h4>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="modern-progress">
+                    <div class="modern-progress-bar" data-width="85">
+                        <div class="progress-fill"></div>
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Web Scraping</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:75%">
+              <div class="skill-header">
+                  <h4 class="title-progress">Automation</h4>
+                  <span class="skill-percentage">80%</span>
+              </div>
+              <div class="modern-progress">
+                  <div class="modern-progress-bar" data-width="80">
+                      <div class="progress-fill"></div>
+                  </div>
+              </div>
+          </div>            
+            <div class="prog-bar">
+                <div class="skill-header">
+                    <h4 class="title-progress">Web Scraping</h4>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="modern-progress">
+                    <div class="modern-progress-bar" data-width="75">
+                        <div class="progress-fill"></div>
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Automation with Python</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:70%">
+              <div class="skill-header">
+                  <h4 class="title-progress">Technical Writing</h4>
+                  <span class="skill-percentage">70%</span>
+              </div>
+              <div class="modern-progress">
+                  <div class="modern-progress-bar" data-width="70">
+                      <div class="progress-fill"></div>
+                  </div>
+              </div>
+          </div>            
+            <div class="prog-bar">
+                <div class="skill-header">
+                    <h4 class="title-progress">AI Engineering</h4>
+                    <span class="skill-percentage">65%</span>
+                </div>
+                <div class="modern-progress">
+                    <div class="modern-progress-bar" data-width="65">
+                        <div class="progress-fill"></div>
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
-                <h4 class="title-progress">Technical Writing</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                      style="width:70%">
-                    </div>
+                <div class="skill-header">
+                    <h4 class="title-progress">UX/UI & Web Development</h4>
+                    <span class="skill-percentage">50%</span>
                 </div>
-            </div>
-            <div class="prog-bar">
-                <h4 class="title-progress">UX/UI & Web Development</h4>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                    aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                <div class="modern-progress">
+                    <div class="modern-progress-bar" data-width="50">
+                        <div class="progress-fill"></div>
                     </div>
                 </div>
             </div>
@@ -190,25 +164,25 @@
         <h1 class="other-title" style="color: black;">Projects</h1>
     </div>
     <div>
-      <div class="row fade-in">
+      <div class="projects-grid fade-in">
 
         <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
             <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">How to Make AI Illustrated Books with Python by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/how-to-make-ai-illustrated-books">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
         </div>
 
         <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
             <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">Easy Steps to Automate Your Posts on BlueSky with Python by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/easy-steps-to-automate-your-posts">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
         </div>
 
         <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
             <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">Make $100+ Monthly With Apify Actors by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/make-100-monthly-with-apify-actors">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
         </div>
 
         <!-- Gallery item -->
-        <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
+        <div class="project-card">
             <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">How to Build a RAG for Cryptocurrency News by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/how-to-build-a-rag-for-cryptocurrency">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>            
         </div>
 
@@ -216,11 +190,12 @@
       </div>
       <div class="go-to-blogs">
         <div class="blog-label">
-          <button class="btn btn-secondary btn-sm">
-            <a href="https://blog.dadhalfdev.com/" class="blog-label-link" target="_blank">
-              <p>Find More</p>
-            </a>
-          </button>
+          <a href="https://blog.dadhalfdev.com/" class="modern-blog-button" target="_blank">
+            <span>Explore More Articles</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </div>
 <div>
@@ -326,6 +301,44 @@
   });
 </script>
 
+<script>
+  // Progress bar animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.modern-progress-bar');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const progressBar = entry.target;
+          const progressFill = progressBar.querySelector('.progress-fill');
+          const width = progressBar.getAttribute('data-width');
+          
+          // Add animation class
+          progressBar.parentElement.parentElement.classList.add('animate');
+          
+          // Set the width with CSS custom property
+          progressFill.style.setProperty('--progress-width', width + '%');
+          
+          // Trigger the animation
+          setTimeout(() => {
+            progressFill.style.width = width + '%';
+          }, 100);
+          
+          // Stop observing this element
+          observer.unobserve(progressBar);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+    
+    // Observe all progress bars
+    progressBars.forEach(bar => {
+      observer.observe(bar);
+    });
+  });
+</script>
+
 <style>
   /* Testimonials Styling */
   .testimonials-container {
@@ -412,10 +425,10 @@
 <!-- Upwork CTA Section -->
 <div class="upwork-cta-section" id="contact" >
   <div class="upwork-cta-container">
-    <h2>Ready to start your next project?</h2>
-    <p>Let's discuss how I can help you with data science, AI, and automation.</p>
+    <h2 style="font-family: 'Fira Code', monospace;">Ready to start your next project?</h2>
+    <p style="font-family: 'Fira Code', monospace;">Let's discuss how I can help you with data science, AI, and automation.</p>
     <a href="https://www.upwork.com/freelancers/~01185447baa36a1b77" target="_blank" class="upwork-cta-button">
-      <span>Schedule a Consultation</span>
+      <span style="font-family: 'Fira Code', monospace;">Schedule a Consultation</span>
       <img src="static/images/icons/upwork-icon.svg" alt="Upwork" class="upwork-icon">
     </a>
   </div>
@@ -486,10 +499,186 @@
   }
 </style>
 
-<div class="footer-section" >
-    <footer>
-      <p>Running in {{year}} and beyond. Built with &#129505 by Me.</p>
-    </footer>
-</div>
+<!-- Modern Footer with Social Links -->
+<footer class="modern-footer">
+  <div class="footer-content">
+    <div class="footer-section-main">
+      <div class="footer-brand">
+        <h3>Marco Rodrigues</h3>
+        <p>Data Science, AI & Web3 Developer</p>
+      </div>
+      <div class="footer-social">
+        <h4>Connect with me</h4>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/dadhalfdev" target="_blank" class="social-link" aria-label="LinkedIn">
+            <img src="static/images/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/macrodrigues" target="_blank" class="social-link" aria-label="GitHub">
+            <img src="static/images/icons/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://medium.com/@dadhalfdev" target="_blank" class="social-link" aria-label="Medium">
+            <img src="static/images/icons/medium.svg" alt="Medium" />
+          </a>
+          <a href="https://x.com/dadhalfdev" target="_blank" class="social-link" aria-label="X (Twitter)">
+            <img src="static/images/icons/x_logo.svg" alt="X" />
+          </a>
+          <a href="https://dadhalfdev.substack.com/" target="_blank" class="social-link" aria-label="Substack">
+            <img src="static/images/icons/substack.svg" alt="Substack" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{year}} Marco Rodrigues. Built with &#129505 by Me.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Modern Footer Styling */
+  .modern-footer {
+    background: #252525;
+    color: #ffffff;
+    padding: 60px 0 20px;
+    margin-top: 0;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-brand h3 {
+    font-family: 'Fira Code', monospace;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #ffeeaa;
+  }
+  
+  .footer-brand p {
+    font-family: 'Fira Code', monospace;
+    color: #cccccc;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .footer-social h4 {
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .social-link:hover {
+    background: rgba(255, 238, 170, 0.2);
+    border-color: #ffeeaa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 238, 170, 0.3);
+  }
+  
+  .social-link img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+  }
+  
+  .social-link:hover img {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    font-family: 'Fira Code', monospace;
+    color: #888888;
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* Modern Blog Button Styling */
+  .modern-blog-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffeeaa;
+    color: #1a1a1a;
+    font-family: 'Fira Code', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 238, 170, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modern-blog-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 238, 170, 0.4);
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+  
+  .modern-blog-button svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .modern-blog-button:hover svg {
+    transform: translateX(4px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-section-main {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+    
+    .modern-blog-button {
+      padding: 14px 28px;
+      font-size: 14px;
+    }
+  }
+</style>
 
 {% endblock %}
