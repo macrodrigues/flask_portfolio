@@ -1425,7 +1425,7 @@ body {
   
   /* Hero Section Mobile */
   .hero-section {
-    padding: 30px 0 20px 0;
+    padding: 40px 0 20px 0;
     min-height: auto;
     max-height: none;
     overflow: visible;
@@ -1451,7 +1451,7 @@ body {
   
   .hero-name {
     font-size: clamp(32px, 8vw, 48px);
-    margin-bottom: 8px;
+    margin-bottom: 40px;
   }
   
   .hero-title {
@@ -1496,19 +1496,19 @@ body {
   }
   
   .hero-image-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     margin: 0 auto;
   }
   
   .yellow-circle {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
   
   .hero-profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
   }
   
   /* About Story Section */
@@ -1924,19 +1924,16 @@ body {
   }
   
   .hero-section {
-    padding: 25px 0 15px 0;
+    padding: 40px 0 15px 0;
   }
   
   .hero-container {
     padding: 0 12px;
   }
   
-  .hero-content {
-    gap: 25px;
-  }
-  
   .hero-name {
     font-size: 32px;
+    margin-bottom: 35px;
   }
   
   .hero-title {
@@ -1973,18 +1970,18 @@ body {
   }
   
   .hero-image-wrapper {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
   }
   
   .yellow-circle {
-    width: 145px;
-    height: 145px;
+    width: 185px;
+    height: 185px;
   }
   
   .hero-profile-pic {
-    width: 145px;
-    height: 145px;
+    width: 185px;
+    height: 185px;
   }
   
   .hero-about-story {

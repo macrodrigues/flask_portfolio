@@ -47,10 +47,10 @@
                 <span></span>
             </button>
             <nav class="main-nav" id="main-nav">
-                <a href="#skills" class="nav-item">SKILLS</a>
-                <a href="#projects" class="nav-item">PROJECTS</a>
+                <a href="/skills" class="nav-item">SKILLS</a>
+                <a href="/projects" class="nav-item">PROJECTS</a>
                 <a href="https://blog.dadhalfdev.com/" target="_blank" class="nav-item">BLOG</a>
-                <a href="#contact" class="nav-item">GET A CONSULTATION</a>
+                <a href="https://www.upwork.com/freelancers/~01185447baa36a1b77" target="_blank" class="nav-item" style="font-weight: bold;">SCHEDULE A CONSULTATION</a>
             </nav>
         </div>
         <div class="header-separator"></div>
@@ -78,7 +78,34 @@
     });
 
     // Start observing the target element
-    observer.observe(fadeElem);
+    if (fadeElem) {
+        observer.observe(fadeElem);
+    }
+
+    // Scroll to section if scroll_to parameter is provided
+    {% if scroll_to %}
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            const targetElement = document.getElementById('{{ scroll_to }}');
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    });
+    {% endif %}
+
+    // Handle hash-based navigation (for backward compatibility)
+    window.addEventListener('load', function() {
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            const targetElement = document.getElementById(hash);
+            if (targetElement) {
+                setTimeout(function() {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        }
+    });
 
     // Hamburger menu toggle
     const hamburgerBtn = document.getElementById('hamburger-btn');
