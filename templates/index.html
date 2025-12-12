@@ -2,55 +2,54 @@
 
 {% block container %}
 
-<!-- Background image -->
-<div class="bg-image">
-    <div class="mask">
-        <div class="d-flex h-100">
-            <img class="profile-pic" src="static/images/profile-pic.webp" alt="" style="border-radius: 50%;">
-        </div>
-    </div>
-</div>
-<!-- About Section -->
-<section class="about-section">
-    <div class="about-container">
-        <div class="about-header">
-            <div class="about-text">
-                <p>                    
-                  Former Microelectronics Engineer, who found out that the easiest and fastest way to build is with a laptop 💻.
-                    <br>
-                    <br>
-                    <strong>Python Developer</strong> passionately dedicated to <strong>Data Science 📈, AI 🤖, and Automation 🌐</strong>.
-                    <br>
-                    <br>
-                    Recently, life gave me the best gift, a beautiful daughter.
-                    <br>
-                    <br>
-                    Now I'm a <strong>freelancer</strong> combining <strong>50% Parenting 👨‍🍼 50% Python, Data Science, AI, and Web3 👨‍💻</strong>.
-                    <br>
-                    <br>
-                    A true <strong style="font-size: 1.2em;">Dad Half Dev</strong>.
-                </p>
+<!-- Hero Section -->
+<section class="hero-section" id="about">
+    <div class="hero-container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-name">I am Marco</div>
+                <div class="hero-title">Python Developer & Data Scientist</div>
+                
+                <!-- Stats Section -->
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">Top Rated</div>
+                            <div class="stat-label">Freelancer</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 11H7C5.89543 11 5 11.8954 5 13V19C5 20.1046 5.89543 21 7 21H9C10.1046 21 11 20.1046 11 19V13C11 11.8954 10.1046 11 9 11Z" fill="currentColor"/>
+                                <path d="M17 3H15C13.8954 3 13 3.89543 13 5V19C13 20.1046 13.8954 21 15 21H17C18.1046 21 19 20.1046 19 19V5C19 3.89543 18.1046 3 17 3Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-value">40+</div>
+                            <div class="stat-label">Successful Projects</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="yellow-circle"></div>
+                <img class="hero-profile-pic" src="static/images/profile-pic.webp" alt="Marco Rodrigues">
             </div>
         </div>
-    </div>
-    <div class="langs-icons-about-container">
-        <div class="row">
-            <div class="icon-about-container">
-                <h3 class="subtitle">I speak </h3>
-                <div class="icon-about-align">
-                    <p class="p-img-icon">
-                        <img alt="portugal" width="30px" src="static/images/icons/portugal.webp" class="lang-img-icon" />
-                    </p>
-                    <p class="p-img-icon">
-                        <img alt="uk" width="30px" src="static/images/icons/united-kingdom.webp" class="lang-img-icon" />
-                    </p>
-                    <p class="p-img-icon">
-                        <img alt="france" width="30px" src="static/images/icons/france.webp" class="lang-img-icon"/>
-                    </p>
-                    <p class="p-img-icon">
-                        <img alt="spain" width="30px" src="static/images/icons/spain.webp" class="lang-img-icon"/>
-                    </p>
-                </div>
+        
+        <!-- About Story Section - Prominent -->
+        <div class="hero-about-story">
+            <div class="about-story-content">
+                <p>
+                    <strong>50% </strong>Parenting | <strong>50%</strong> Python, Data Science, AI, and Automation.
+                </p>
             </div>
         </div>
     </div>
@@ -60,100 +59,164 @@
 <div class="colored-section" id="skills">
     <div class="other-header">
         <h1 class="other-title">Skills & Expertise</h1>
-        <div class="icons-container">
-            <div class="row">
-                <div class="icon-container">
-                    <div class="icon-align">
-                        <i class="material-symbols-outlined md-100">equalizer</i>
-                        <span class="caption-icon">Data Analysis, Data Visualization, Dashbords (pandas, plotly, dash, ...)</span>
-                    </div>
-                    <div class="icon-align">
-                      	<i class="material-symbols-outlined md-100">edit_square</i>
-                        <span class="caption-icon">Technical Writing, Documentation, Reports</span>
-                    </div>
-                    <div class="icon-align">
-                        <i class="material-symbols-outlined md-100">dvr</i>
-                        <span class="caption-icon">Web Development, CSS, HTML, Flask, Django</span>
-                    </div>
-                    <div class="icon-align">
-                        <i class="material-symbols-outlined md-100">precision_manufacturing</i>
-                        <span class="caption-icon">Automation, Python Scripting, Web Scraping, GUIs</span>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="prog-bars">
             <div class="prog-bar">
                 <div class="skill-header">
-                    <h4 class="title-progress">Data Science</h4>
-                    <span class="skill-percentage">85%</span>
+                    <h4 class="title-progress">Data Science & Analytics</h4>
                 </div>
-                <div class="modern-progress">
-                    <div class="modern-progress-bar" data-width="85">
-                        <div class="progress-fill"></div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">Regression and Classification</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">Exploratory Data Analysis (EDA)</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">Media Marketing Models (MMM)</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">Natural Language Processing (NLP)</span>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-square"></span>
+                      <span class="tech-name">Data Visualization (Dash Plotly)</span>
+                  </div>                    
+                </div>
+                <div class="progress-container">
+                    <div class="modern-progress">
+                        <div class="modern-progress-bar" data-width="85">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prog-bar">
+                <div class="skill-header">
+                    <h4 class="title-progress">AI Engineering</h4>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">LangChain & LangGraph</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">RAG Systems</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">OpenAI API</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">AI Bots</span>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-square"></span>
+                      <span class="tech-name">LangExtract</span>
+                  </div>                    
+                </div>
+                <div class="progress-container">
+                    <div class="modern-progress">
+                        <div class="modern-progress-bar" data-width="80">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>          
+            <div class="prog-bar">
+                <div class="skill-header">
+                    <h4 class="title-progress">Web Scraping</h4>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">Playwright</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-square"></span>
+                        <span class="tech-name">BeautifulSoup</span>
+                    </div>
+                    <div class="tech-item">
+                      <span class="tech-square"></span>
+                      <span class="tech-name">Apify Actors</span>
+                  </div>                    
+                </div>
+                <div class="progress-container">
+                    <div class="modern-progress">
+                        <div class="modern-progress-bar" data-width="80">
+                            <div class="progress-fill"></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="prog-bar">
               <div class="skill-header">
                   <h4 class="title-progress">Automation</h4>
-                  <span class="skill-percentage">80%</span>
               </div>
-              <div class="modern-progress">
-                  <div class="modern-progress-bar" data-width="80">
-                      <div class="progress-fill"></div>
+              <div class="tech-stack">
+                <div class="tech-item">
+                    <span class="tech-square"></span>
+                    <span class="tech-name">ETL Pipelines</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-square"></span>
+                    <span class="tech-name">Botpress</span>
+                </div>
+            </div>              
+              <div class="progress-container">
+                  <div class="modern-progress">
+                      <div class="modern-progress-bar" data-width="80">
+                          <div class="progress-fill"></div>
+                      </div>
                   </div>
               </div>
-          </div>            
-            <div class="prog-bar">
-                <div class="skill-header">
-                    <h4 class="title-progress">Web Scraping</h4>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="modern-progress">
-                    <div class="modern-progress-bar" data-width="75">
-                        <div class="progress-fill"></div>
-                    </div>
-                </div>
-            </div>
+          </div>              
             <div class="prog-bar">
               <div class="skill-header">
                   <h4 class="title-progress">Technical Writing</h4>
-                  <span class="skill-percentage">70%</span>
               </div>
-              <div class="modern-progress">
-                  <div class="modern-progress-bar" data-width="70">
-                      <div class="progress-fill"></div>
+              <div class="progress-container">
+                  <div class="modern-progress">
+                      <div class="modern-progress-bar" data-width="70">
+                          <div class="progress-fill"></div>
+                      </div>
                   </div>
               </div>
-          </div>            
-            <div class="prog-bar">
-                <div class="skill-header">
-                    <h4 class="title-progress">AI Engineering</h4>
-                    <span class="skill-percentage">65%</span>
+          </div>
+        </div>
+        
+        <!-- Languages Section -->
+        <div class="languages-section">
+            <h4 class="languages-label">I speak</h4>
+            <div class="languages-icons">
+                <div class="language-flag">
+                    <img alt="portugal" src="static/images/icons/portugal.webp" />
+                    <span class="language-name">Portuguese</span>
                 </div>
-                <div class="modern-progress">
-                    <div class="modern-progress-bar" data-width="65">
-                        <div class="progress-fill"></div>
-                    </div>
+                <div class="language-flag">
+                    <img alt="uk" src="static/images/icons/united-kingdom.webp" />
+                    <span class="language-name">English</span>
                 </div>
-            </div>
-            <div class="prog-bar">
-                <div class="skill-header">
-                    <h4 class="title-progress">UX/UI & Web Development</h4>
-                    <span class="skill-percentage">50%</span>
+                <div class="language-flag">
+                    <img alt="france" src="static/images/icons/france.webp" />
+                    <span class="language-name">French</span>
                 </div>
-                <div class="modern-progress">
-                    <div class="modern-progress-bar" data-width="50">
-                        <div class="progress-fill"></div>
-                    </div>
+                <div class="language-flag">
+                    <img alt="spain" src="static/images/icons/spain.webp" />
+                    <span class="language-name">Spanish</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!--Projects Section-->
-<div id="projects">
+<div id="projects" class="projects-section">
     <div class="other-header">
         <h1 class="other-title" style="color: black;">Projects</h1>
     </div>
@@ -162,22 +225,46 @@
 
         <!-- Gallery item -->
         <div class="project-card">
-            <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">How to Make AI Illustrated Books with Python by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/how-to-make-ai-illustrated-books">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+          <a href="https://blog.dadhalfdev.com/p/i-made-a-video-with-veo3-and-nano" target="_blank" class="project-card-link">
+              <div class="project-card-content">
+                  <h3 class="project-title">I Made a Video with Veo3 And Nano Banana From Old Pieces of Artwork</h3>
+                  <p class="project-subtitle">Follow these steps to make your first video with Veo3 and Nano Banana..</p>
+                  <div class="project-read-more">Read on Substack →</div>
+              </div>
+          </a>
+      </div>             
+
+        <!-- Gallery item -->
+        <div class="project-card">
+          <a href="https://blog.dadhalfdev.com/p/x-api-v2-documentation-is-a-complete" target="_blank" class="project-card-link">
+              <div class="project-card-content">
+                  <h3 class="project-title">Learn How to Build a Bot on X Step-by-Step With This Tutorial</h3>
+                  <p class="project-subtitle">Instead of using the X API V2 documentation, make a bot on steroids with these steps.</p>
+                  <div class="project-read-more">Read on Substack →</div>
+              </div>
+          </a>
+      </div>        
+
+        <!-- Gallery item -->
+        <div class="project-card">
+            <a href="https://dadhalfdev.substack.com/p/make-100-monthly-with-apify-actors" target="_blank" class="project-card-link">
+                <div class="project-card-content">
+                    <h3 class="project-title">Make $100+ Monthly With Apify Actors</h3>
+                    <p class="project-subtitle">Monetize your web scraping skills with Apify's actor marketplace</p>
+                    <div class="project-read-more">Read on Substack →</div>
+                </div>
+            </a>
         </div>
 
         <!-- Gallery item -->
         <div class="project-card">
-            <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">Easy Steps to Automate Your Posts on BlueSky with Python by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/easy-steps-to-automate-your-posts">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-        </div>
-
-        <!-- Gallery item -->
-        <div class="project-card">
-            <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">Make $100+ Monthly With Apify Actors by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/make-100-monthly-with-apify-actors">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
-        </div>
-
-        <!-- Gallery item -->
-        <div class="project-card">
-            <div class="substack-post-embed" style="height: 500px; overflow: auto;"><p lang="en">How to Build a RAG for Cryptocurrency News by Marco Rodrigues</p><a data-post-link href="https://dadhalfdev.substack.com/p/how-to-build-a-rag-for-cryptocurrency">Read on Substack</a></div><script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>            
+            <a href="https://dadhalfdev.substack.com/p/how-to-build-a-rag-for-cryptocurrency" target="_blank" class="project-card-link">
+                <div class="project-card-content">
+                    <h3 class="project-title">How to Build a RAG for Cryptocurrency News</h3>
+                    <p class="project-subtitle">Create a Retrieval-Augmented Generation system for crypto news analysis</p>
+                    <div class="project-read-more">Read on Substack →</div>
+                </div>
+            </a>
         </div>
 
         <!-- End -->
@@ -185,60 +272,17 @@
       <div class="go-to-blogs">
         <div class="blog-label">
           <a href="https://blog.dadhalfdev.com/" class="modern-blog-button" target="_blank">
-            <span>Explore More Articles</span>
+            <span>Find more</span>
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
         </div>
       </div>
-<div>
-
-<!--Testimonials Section-->
-<div id="testimonials" style="background-color: #252525;">
-  <div class="other-header">
-    <h1 class="other-title" style="color: rgb(255, 255, 255);">What people say?</h1>
-  </div>
-  
-  <div class="testimonials-container">
-    <div class="testimonial-slider">
-      <!-- Testimonial 1 -->
-      <div class="testimonial-slide">
-        <p class="testimonial-text">"Marco was fantastic to work with!! Super communicative, open to brainstorming, had solutions for every idea we came up with. It was great working with him, and I would absolutely work with him again on another project."</p>
-        <p class="testimonial-author">- <strong>Brittany on Upwork</strong>, Product Manager</p>
-      </div>
-      
-      <!-- Testimonial 2 -->
-      <div class="testimonial-slide">
-        <p class="testimonial-text">"Marco is a top-professional and a great person. Easy to work with and very approachable. Recommended developer!."</p>
-        <p class="testimonial-author">- <strong>Ahmet on Upwork</strong>, Technical Writer & Editor</p>
-      </div>
-      
-      <!-- Testimonial 3 -->
-      <div class="testimonial-slide">
-        <p class="testimonial-text">"Responsive as f*ck and a super nice guy. Got the job done very fast :) Gonna use him again."</p>
-        <p class="testimonial-author">- <strong>Randy on Upwwork</strong>, Product Owner</p>
-      </div>
-      
-      <!-- Testimonial 4 -->
-      <div class="testimonial-slide">
-        <p class="testimonial-text">"Marco has been a key element in setting up our analytics architecture. He has delivered great results, from automating reports using the Notion API and creating Plotly charts to designing insightful dashboards in Looker Studio. His expertise in Data Visualization and Python backend development is impressive. Moreover, he is reliable and responsive, often available for urgent requests."</p>
-        <p class="testimonial-author">- <strong>Jemma on Upwork</strong>, Startup Co-Founder</p>
-      </div>
-    
-    <!-- Slider Navigation -->
-    <div class="slider-nav">
-      <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
     </div>
-  </div>
 </div>
 
-<!-- Add below before the closing </body> tag or at the end of your content -->
+<!-- Testimonials Carousel Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
@@ -260,12 +304,11 @@
       });
       
       // Show the current slide and activate the corresponding dot
-      slides[n].classList.add('active');
-      dots[n].classList.add('active');
+      if (slides[n] && dots[n]) {
+        slides[n].classList.add('active');
+        dots[n].classList.add('active');
+      }
     }
-    
-    // Show the first slide initially
-    slides[0].classList.add('active');
     
     // Dot navigation
     dots.forEach((dot, index) => {
@@ -291,7 +334,9 @@
     }
     
     // Start the auto-advance
-    startInterval();
+    if (totalSlides > 0) {
+      startInterval();
+    }
   });
 </script>
 
@@ -336,12 +381,63 @@
 <!-- Upwork CTA Section -->
 <div class="upwork-cta-section" id="contact" >
   <div class="upwork-cta-container">
-    <h2 style="font-family: 'Fira Code', monospace;">Ready to start your next project?</h2>
-    <p style="font-family: 'Fira Code', monospace;">Let's discuss how I can help you with data science, AI, and automation.</p>
-    <a href="https://www.upwork.com/freelancers/~01185447baa36a1b77" target="_blank" class="upwork-cta-button">
-      <span style="font-family: 'Fira Code', monospace;">Schedule a Consultation</span>
-      <img src="static/images/icons/upwork-icon.svg" alt="Upwork" class="upwork-icon">
-    </a>
+    <h1 class= "other-title "style="font-family: 'Fira Code', monospace;">Trusted by Dozens of Clients </h2>
+    
+    <!-- Testimonials Slider -->
+    <div class="testimonial-slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide active">
+            <div class="testimonial-content">
+                <p class="testimonial-text">"Marco was fantastic to work with!! Super communicative, open to brainstorming, had solutions for every idea we came up with. It was great working with him, and I would absolutely work with him again on another project."</p>
+                <p class="testimonial-author">- <strong>Brittany on Upwork</strong>, Product Manager</p>
+            </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide">
+            <div class="testimonial-content">
+                <p class="testimonial-text">"Marco is a top-professional and a great person. Easy to work with and very approachable. Recommended developer!."</p>
+                <p class="testimonial-author">- <strong>Ahmet on Upwork</strong>, Technical Writer & Editor</p>
+            </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide">
+            <div class="testimonial-content">
+                <p class="testimonial-text">"Responsive as f*ck and a super nice guy. Got the job done very fast :) Gonna use him again."</p>
+                <p class="testimonial-author">- <strong>Randy on Upwork</strong>, Product Owner</p>
+            </div>
+        </div>
+        
+        <!-- Testimonial 4 -->
+        <div class="testimonial-slide">
+            <div class="testimonial-content">
+                <p class="testimonial-text">"Marco has been a key element in setting up our analytics architecture. He has delivered great results, from automating reports using the Notion API and creating Plotly charts to designing insightful dashboards in Looker Studio. His expertise in Data Visualization and Python backend development is impressive. Moreover, he is reliable and responsive, often available for urgent requests."</p>
+                <p class="testimonial-author">- <strong>Jemma on Upwork</strong>, Startup Co-Founder</p>
+            </div>
+        </div>
+        
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="go-to-blogs">
+      <div class="blog-label">
+        <a href="https://www.upwork.com/freelancers/~01185447baa36a1b77" class="modern-blog-button" style="background: #ffeeaa;" target="_blank">
+          <span>Schedule a consultation</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -349,10 +445,6 @@
 <footer class="modern-footer">
   <div class="footer-content">
     <div class="footer-section-main">
-      <div class="footer-brand">
-        <h3>Marco Rodrigues</h3>
-        <p>Python Developer & Data Scientist</p>
-      </div>
       <div class="footer-social">
         <h4>Connect with me</h4>
         <div class="social-links">

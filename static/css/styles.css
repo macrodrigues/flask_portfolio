@@ -2,15 +2,452 @@
   background-color: rgb(255, 255, 255) !important;
 }
 
-/* About */
-.bg-image {
-    background-image: url(../images/website_cover.webp);
-    background-position: 0px -64%;
-    background-size: cover;
-    /* margin-top: 25px; */
-    height: 16vw;
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Header Styles */
+.main-header {
+  background-color: #bae9f9;
+  padding: 15px 0 15px 0px;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-item {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Fira Code', monospace;
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item:hover {
+    opacity: 0.7;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
     position: relative;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #ffeeaa;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting {
+    font-family: 'Fira Code', monospace;
+    font-size: 48px;
+    font-weight: 1000;
+    color: #000;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.hero-name {
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(36px, 5vw, 72px);
+    font-weight: 1000;
+    color: #000;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.hero-title {
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(24px, 3.5vw, 48px);
+    font-weight: 500;
+    color: #000;
+    margin-bottom: clamp(20px, 3vw, 40px);
+    letter-spacing: -1px;
+}
+
+/* Hero Stats Section */
+.hero-stats {
+    display: flex;
+    gap: clamp(16px, 2vw, 24px);
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgb(255 254 242);
+    backdrop-filter: blur(10px);
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 200px;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    background: rgb(255 254 242);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgb(186, 233, 249);
+    border-radius: 10px;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.stat-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.download-cv-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 2px solid #000;
+    transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.play-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #333;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    flex: 0 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-top: 0;
+}
+
+.yellow-circle {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    background-color: #ffeeaa;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.hero-profile-pic {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.about-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 40px;
+    flex-wrap: wrap;
+    background: #ffeeaa;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+}
+
+.nav-link {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #1a202c;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link:active {
+    color: #1a202c;
+}
+
+.about-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+/* Hero About Story - Prominent */
+.hero-about-story {
+    margin-top: clamp(20px, 3vw, 40px);
+    padding: 0;
+}
+
+.about-story-content {
+    max-width: 900px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(16px, 2vw, 22px);
+    line-height: 1.9;
+    color: #1a202c;
+}
+
+.about-story-content p {
+    margin: 0;
+}
+
+.about-story-content strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.about-text-content {
+    max-width: 800px;
+    margin: 0 0 40px 0;
+    text-align: left;
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #2d3748;
+}
+
+.about-text-content p {
+    margin: 0;
+}
+
+.about-text-content strong {
+    color: #000;
+    font-weight: 600;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+.about-text strong {
+    color: #1a202c;
+    font-weight: 600;
+}
+
+.languages-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.languages-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.language-flag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.language-flag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.language-flag img {
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.language-name {
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: #475569;
+    font-weight: 500;
 }
 
 .h4-header {
@@ -21,76 +458,95 @@
     color: rgb(188, 187, 187);
 }
 
-.profile-pic {
-  position: absolute;
-  top: 15.7%;
-  right: 2.5%;
-  width: 18%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.about-header {
-    text-align: center;
-}
-
-.about-text{
-    margin-left: 20vw;
-    margin-right: 20vw;
-    margin-top: 4vw;
-    text-align: justify;
-    font-family: 'Fira Code', monospace;
-}
-
 /* skills section */
 
 .prog-bars {
-    margin-top: 4%;
-    margin-bottom: 12%;
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 30%;
-    display: inline-block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10%;
+    display: block;
 }
 
 .prog-bar {
-    margin-top: 7%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Tech Stack Items */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    color: #475569;
+}
+
+.tech-square {
+    width: 8px;
+    height: 8px;
+    background-color: #bae9f9;
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.tech-name {
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* Modern Progress Bars */
 .skill-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
 }
 
 .title-progress {
     font-family: 'Fira Code', monospace;
-    font-size: clamp(14px, 1.5vw, 24px);
-    color: rgb(255, 255, 255);
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: rgb(0, 0, 0);
     margin: 0;
     font-weight: 600;
 }
 
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
 .skill-percentage {
-    font-family: 'Fira Code', monospace;
-    font-size: clamp(12px, 1.2vw, 18px);
-    color: #ffeeaa;
-    font-weight: 600;
-    background: rgba(255, 238, 170, 0.1);
-    padding: 4px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 238, 170, 0.3);
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(12px, 1.2vw, 18px);
+  color: #bae9f9;
+  font-weight: 600;
+  background: #bae9f917;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #bae9f9;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .modern-progress {
-    width: 100%;
-    height: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 6px;
+    flex: 1;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
     overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .modern-progress-bar {
@@ -101,8 +557,8 @@
 
 .progress-fill {
     height: 100%;
-    background: #ffeeaa;
-    border-radius: 6px;
+    background: #bae9f9;
+    border-radius: 8px;
     width: 0%;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -281,6 +737,8 @@
 
 .go-to-blogs {
   display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin: auto;
   justify-content: center;
 }
@@ -302,17 +760,13 @@
 
 /* Sections*/
 
-.about-section {
-    position: static;
-    min-height: 80vh;
-
-}
 
 .colored-section {
-    background-color: #252525;
-    /* height: 100vh; */
+    background-color: rgb(255 254 242);
     align-items: center;
-    margin:auto;
+    margin: auto;
+    padding: 40px 0;
+    position: relative;
 }
 
 .btn-secondary {
@@ -409,16 +863,16 @@
 .other-header {
     align-items: center;
     text-align: center;
-    padding: 5%;
+    padding: 0 60px 40px 60px;
     margin: 0 auto;
+    max-width: 1400px;
 }
 
 .other-title {
-    font-size: 200%;
-    /* font-size: clamp(40px, 1.5vw, 20px); */
+    font-size: clamp(40px, 1.5vw, 20px);
     font-family: 'Fira Code', monospace;
     font-weight: 1000;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .row {
@@ -520,6 +974,9 @@
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -527,9 +984,57 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.project-card .substack-post-embed {
-    border-radius: 12px;
-    overflow: hidden;
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.project-card-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.project-subtitle {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    color: #64748b;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.project-read-more {
+    font-family: 'Fira Code', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: #bae9f9;
+    margin-top: auto;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-read-more {
+    color: #000;
 }
 
 /* Responsive grid adjustments */
@@ -556,10 +1061,17 @@
 }
 
 /* Upwork CTA Styling */
+.projects-section {
+  position: relative;
+  padding: 40px 0;
+  background-color: #ffeeaa;
+}
+
 .upwork-cta-section {
-  background-color: #252525;
-  padding: 80px 0;
+  background-color: rgb(255 254 242);
+  padding-top: 40px;
   text-align: center;
+  position: relative;
 }
 
 .upwork-cta-container {
@@ -570,23 +1082,14 @@
 
 .upwork-cta-container h2 {
   font-size: 32px;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-.upwork-cta-container p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #ffffff;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 40px;
+  color: #000;
 }
 
 .upwork-cta-button {
   display: inline-flex;
   align-items: center;
-  background-color: #6fda44;
+  background-color: #ffeeaa;
   color: #000;
   font-weight: bold;
   padding: 15px 30px;
@@ -599,7 +1102,7 @@
 }
 
 .upwork-cta-button:hover {
-  background-color: #5dc234;
+  background-color: #ffeeaa;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
   text-decoration: none;
@@ -620,8 +1123,8 @@
 
 /* Modern Footer Styling */
 .modern-footer {
-  background: #252525;
-  color: #ffffff;
+  background: rgb(255 254 242);
+  color: #000;
   padding: 60px 0 20px;
   margin-top: 0;
 }
@@ -634,32 +1137,35 @@
 
 .footer-section-main {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 40px;
   flex-wrap: wrap;
-  gap: 40px;
 }
 
 .footer-brand h3 {
   font-family: 'Fira Code', monospace;
   font-size: 24px;
   margin-bottom: 8px;
-  color: #ffeeaa;
+  color: #000;
 }
 
 .footer-brand p {
   font-family: 'Fira Code', monospace;
-  color: #cccccc;
+  color: #333;
   font-size: 14px;
   margin: 0;
+}
+
+.footer-social {
+  text-align: center;
 }
 
 .footer-social h4 {
   font-family: 'Fira Code', monospace;
   font-size: 18px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #000;
 }
 
 .social-links {
@@ -674,39 +1180,38 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: rgba(255, 255, 255, 0.1);
+  background: #bae9f9;
   border-radius: 12px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .social-link:hover {
-  background: rgba(255, 238, 170, 0.2);
-  border-color: #ffeeaa;
+  background: #bae9f95b;;
+  border-color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 238, 170, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-link img {
   width: 24px;
   height: 24px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0);
   transition: filter 0.3s ease;
 }
 
 .social-link:hover img {
-  filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+  filter: brightness(0) opacity(0.8);
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 20px;
+  padding-top: 10px;
   text-align: center;
 }
 
 .footer-bottom p {
   font-family: 'Fira Code', monospace;
-  color: #888888;
+  color: #333;
   font-size: 14px;
   margin: 0;
 }
@@ -716,7 +1221,7 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #ffeeaa;
+  background: rgb(255 254 242);
   color: #1a1a1a;
   font-family: 'Fira Code', monospace;
   font-weight: 600;
@@ -746,28 +1251,31 @@
 }
 
 /* Testimonials Styling */
-.testimonials-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* Testimonials Section */
 
 .testimonial-slider {
   position: relative;
-  border-radius: 8px;
-  padding: 30px;
-  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 50px 60px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   min-height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .testimonial-slide {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  right: 30px;
-  height: 250px;
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  right: 50px;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+  transform: translateY(20px);
   pointer-events: none;
 }
 
@@ -777,26 +1285,38 @@
   top: 0;
   left: 0;
   right: 0;
+  transform: translateY(0);
   pointer-events: auto;
 }
 
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .testimonial-text {
-  color: white;
-  font-size: 18px;
-  line-height: 1.6;
+  color: #1a202c;
+  font-family: 'Fira Code', monospace;
+  font-size: 15px;
+  line-height: 1.7;
   font-style: italic;
-  margin-bottom: 20px;
+  margin: 0;
+  position: relative;
+  padding-left: 0;
 }
 
 .testimonial-author {
-  color: #ccc;
+  color: #64748b;
   text-align: right;
-  font-size: 16px;
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  margin: 0;
 }
 
 .testimonial-author strong {
-  color: white;
-  font-weight: bold;
+  color: #1a202c;
+  font-weight: 600;
 }
 
 /* Slider Navigation */
@@ -804,43 +1324,220 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .slider-dots {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  background-color: #555;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
-  margin: 0 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.dot:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: scale(1.2);
 }
 
 .dot.active {
-  background-color: #fff;
+  background-color: #ffeeaa;
+  border-color: #000;
+  transform: scale(1.3);
 }
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
   
+  /* Header Mobile */
+  .main-header {
+    padding: 12px 0;
+  }
+  
+  .header-container {
+    padding: 0 15px;
+    flex-wrap: nowrap;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .logo a {
+    font-size: 18px;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    order: 2;
+    margin-left: auto;
+  }
+  
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #bae9f9;
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 15px;
+    margin-top: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .main-nav.active {
+    display: flex;
+  }
+  
+  .nav-item {
+    font-size: 14px;
+    padding: 12px 15px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  
+  .cta-button svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  /* Hero Section Mobile */
+  .hero-section {
+    padding: 30px 0 20px 0;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .hero-container {
+    padding: 0 15px;
+  }
+  
+  .hero-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    max-width: 100%;
+  }
+  
+  .greeting {
+    font-size: 28px;
+  }
+  
+  .hero-name {
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 8px;
+  }
+  
+  .hero-title {
+    font-size: clamp(20px, 5vw, 32px);
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  
+  .hero-stats {
+    margin-top: 24px;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .stat-card {
+    min-width: 140px;
+    padding: 14px 16px;
+    flex: 0 1 auto;
+  }
+  
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .stat-value {
+    font-size: 16px;
+  }
+  
+  .stat-label {
+    font-size: 11px;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  .yellow-circle {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .hero-profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+  
+  /* About Story Section */
+  .hero-about-story {
+    padding: 0 15px;
+    margin-top: 30px;
+  }
+  
+  .about-story-content {
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.7;
+  }
+  
   /* Skills Section */
   .colored-section {
-    padding: 40px 20px;
+    padding: 30px 0;
   }
   
   .other-header {
-    padding: 20px 15px;
+    padding: 0 15px 25px 15px;
+  }
+  
+  .prog-bars {
+    padding: 0 15px;
   }
   
   .other-title {
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-size: clamp(24px, 6vw, 32px);
+    margin-bottom: 25px;
   }
   
   .icons-container {
@@ -875,103 +1572,174 @@
   }
   
   /* Progress Bars */
-  .prog-bars {
-    margin: 5% 10%;
-    width: 80%;
+  .prog-bar {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  .prog-bar {
-    margin-top: 5%;
+  .tech-stack {
+    gap: 8px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .tech-item {
+    font-size: 11px;
+  }
+  
+  .tech-square {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .languages-section {
+    margin-top: 30px;
+    padding: 25px 15px;
+  }
+  
+  .languages-label {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .languages-icons {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .language-flag {
+    gap: 6px;
+  }
+  
+  .language-flag img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .language-name {
+    font-size: 12px;
   }
   
   .skill-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    margin-bottom: 10px;
   }
   
   .title-progress {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 18px);
+  }
+  
+  .progress-container {
+    gap: 10px;
+    margin-top: 6px;
   }
   
   .skill-percentage {
-    font-size: 14px;
-    align-self: flex-end;
+    font-size: clamp(11px, 2.5vw, 14px);
+    padding: 3px 10px;
+  }
+  
+  .modern-progress {
+    height: 14px;
   }
   
   /* Projects Section */
+  .projects-section {
+    padding: 30px 0;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 16px;
     padding: 0 15px;
   }
   
-  .project-card {
-    min-height: 400px;
+  .project-card-link {
+    padding: 20px 18px;
   }
   
-  .project-card .substack-post-embed {
-    height: 400px;
+  .project-title {
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.4;
+    margin-bottom: 8px;
   }
   
-  .go-to-blogs {
-    padding: 30px 20px;
-  }
-  
-  /* Testimonials Section */
-  .testimonials-container {
-    padding: 20px 15px;
-  }
-  
-  .testimonial-slider {
-    padding: 20px;
-    min-height: 300px;
-  }
-  
-  .testimonial-slide {
-    height: auto;
-    min-height: 250px;
-  }
-  
-  .testimonial-text {
-    font-size: 16px;
+  .project-subtitle {
+    font-size: clamp(12px, 3vw, 14px);
     line-height: 1.5;
   }
   
-  .testimonial-author {
+  .project-read-more {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+  
+  .go-to-blogs {
+    padding: 25px 15px;
+  }
+  
+  .modern-blog-button {
+    padding: 12px 20px;
     font-size: 14px;
+  }
+  
+  /* Testimonials Section */
+  .testimonial-slider {
+    padding: 25px 20px;
+    min-height: 180px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+  }
+  
+  .testimonial-slide {
+    top: 25px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  .testimonial-text {
+    font-size: clamp(13px, 3.5vw, 15px);
+    line-height: 1.6;
+    padding-left: 0;
+  }
+  
+  .testimonial-author {
+    font-size: 11px;
+    margin-top: 12px;
   }
   
   /* Upwork CTA Section */
   .upwork-cta-section {
-    padding: 60px 20px;
+    padding: 40px 15px;
   }
   
   .upwork-cta-container {
-    padding: 0 15px;
+    padding: 0;
   }
   
+  .upwork-cta-container h1,
   .upwork-cta-container h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  .upwork-cta-container p {
-    font-size: 16px;
+    font-size: clamp(20px, 5vw, 28px);
     margin-bottom: 25px;
   }
   
-  .upwork-cta-button {
+  .testimonial-slider {
+    max-width: 100%;
+  }
+  
+  .go-to-blogs {
+    padding: 20px 15px;
+  }
+  
+  .modern-blog-button {
     padding: 12px 24px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
+    font-size: 13px;
   }
   
   /* Footer */
   .modern-footer {
-    padding: 40px 0 20px;
+    padding: 30px 0 15px;
   }
   
   .footer-content {
@@ -980,28 +1748,27 @@
   
   .footer-section-main {
     align-items: center !important;
+    margin-bottom: 30px;
   }
   
-  .footer-brand h3 {
-    font-size: 20px;
-  }
-  
-  .footer-brand p {
-    font-size: 12px;
+  .footer-social {
+    padding: 25px 20px;
+    max-width: 100%;
   }
   
   .footer-social h4 {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 18px);
+    margin-bottom: 18px;
   }
   
   .social-links {
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
   
   .social-link {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
   }
   
   .social-link img {
@@ -1009,8 +1776,12 @@
     height: 20px;
   }
   
+  .footer-bottom {
+    padding-top: 15px;
+  }
+  
   .footer-bottom p {
-    font-size: 12px;
+    font-size: 11px;
   }
   
   /* Blog Button */
@@ -1021,14 +1792,77 @@
     max-width: 280px;
     justify-content: center;
   }
+  
+  .about-hero {
+    padding: 0 20px;
+  }
+  
+  .about-hero-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .profile-image-wrapper {
+    width: 200px;
+  }
+  
+  .about-content-wrapper {
+    width: 100%;
+  }
+  
+  .about-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .about-navbar {
+    padding: 10px 15px;
+    gap: 12px;
+    max-width: 100%;
+  }
+  
+  .nav-link {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+.languages-section {
+    margin-top: 60px;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.languages-icons {
+    justify-content: center;
+    gap: 16px;
+}
+  
+  .language-flag {
+    padding: 6px 12px;
+  }
+  
+  .language-flag img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .language-name {
+    font-size: 13px;
+  }
 }
 
 /* Tablet Responsive Design */
 @media (min-width: 769px) and (max-width: 1024px) {
   
   .prog-bars {
-    margin: 5% 20%;
-    width: 60%;
+    padding: 0 40px;
   }
   
   .projects-grid {
@@ -1050,25 +1884,278 @@
 /* Small Mobile Devices */
 @media (max-width: 480px) {
   
+  /* Extra Small Mobile Optimizations */
+  .main-header {
+    padding: 10px 0;
+  }
+  
+  .header-container {
+    padding: 0 12px;
+    gap: 10px;
+  }
+  
+  .logo a {
+    font-size: 16px;
+  }
+  
+  .hamburger-menu {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .hamburger-menu span {
+    height: 2.5px;
+  }
+  
+  .main-nav {
+    padding: 15px 12px;
+    margin-top: 10px;
+  }
+  
+  .nav-item {
+    font-size: 13px;
+    padding: 10px 12px;
+    white-space: nowrap;
+  }
+  
+  .cta-button {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+  
+  .hero-section {
+    padding: 25px 0 15px 0;
+  }
+  
+  .hero-container {
+    padding: 0 12px;
+  }
+  
+  .hero-content {
+    gap: 25px;
+  }
+  
+  .hero-name {
+    font-size: 32px;
+  }
+  
+  .hero-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-stats {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .stat-card {
+    min-width: 120px;
+    padding: 12px 14px;
+  }
+  
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .stat-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .stat-value {
+    font-size: 14px;
+  }
+  
+  .stat-label {
+    font-size: 10px;
+  }
+  
+  .hero-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .yellow-circle {
+    width: 145px;
+    height: 145px;
+  }
+  
+  .hero-profile-pic {
+    width: 145px;
+    height: 145px;
+  }
+  
+  .hero-about-story {
+    padding: 0 12px;
+    margin-top: 25px;
+  }
+  
+  .about-story-content {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .colored-section {
+    padding: 25px 0;
+  }
+  
+  .other-header {
+    padding: 0 12px 20px 12px;
+  }
+  
   .prog-bars {
-    margin: 5% 5%;
-    width: 90%;
+    padding: 0 12px;
+  }
+  
+  .other-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .prog-bar {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  
+  .title-progress {
+    font-size: 14px;
+  }
+  
+  .progress-container {
+    gap: 8px;
+    margin-top: 5px;
+  }
+  
+  .skill-percentage {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  
+  .modern-progress {
+    height: 12px;
+  }
+  
+  .tech-item {
+    font-size: 10px;
+  }
+  
+  .languages-section {
+    margin-top: 25px;
+    padding: 20px 12px;
+  }
+  
+  .languages-label {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  
+  .languages-icons {
+    gap: 10px;
+  }
+  
+  .language-flag img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .language-name {
+    font-size: 11px;
+  }
+  
+  .projects-section {
+    padding: 25px 0;
+  }
+  
+  .projects-grid {
+    gap: 14px;
+    padding: 0 12px;
+  }
+  
+  .project-card-link {
+    padding: 18px 16px;
+  }
+  
+  .project-title {
+    font-size: 14px;
+  }
+  
+  .project-subtitle {
+    font-size: 12px;
+  }
+  
+  .project-read-more {
+    font-size: 10px;
+  }
+  
+  .go-to-blogs {
+    padding: 20px 12px;
+  }
+  
+  .modern-blog-button {
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+  
+  .testimonial-slider {
+    padding: 20px 16px;
+    min-height: 160px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  .testimonial-slide {
+    top: 20px;
+    left: 16px;
+    right: 16px;
   }
   
   .testimonial-text {
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 1.5;
   }
   
+  .testimonial-author {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+  
+  .upwork-cta-section {
+    padding: 30px 12px;
+  }
+  
+  .upwork-cta-container h1,
   .upwork-cta-container h2 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
   }
   
-  .upwork-cta-container p {
-    font-size: 14px;
+  .footer-social {
+    padding: 20px 16px;
   }
-
-  .footer-section-main {
-    align-items: center !important;
+  
+  .footer-social h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-link img {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .modern-footer {
+    padding: 25px 0 12px;
+  }
+  
+  .footer-bottom p {
+    font-size: 10px;
   }
 }
 

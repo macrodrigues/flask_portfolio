@@ -36,6 +36,25 @@
     <link rel = "icon" href = "static/images/profile-pic.webp" type = "image/x-icon" style="border-radius: 50%;">
 </head>
 <body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#about">DAD HALF DEV.</a>
+            </div>
+            <button class="hamburger-menu" aria-label="Toggle menu" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <a href="#skills" class="nav-item">SKILLS</a>
+                <a href="#projects" class="nav-item">PROJECTS</a>
+                <a href="https://blog.dadhalfdev.com/" target="_blank" class="nav-item">BLOG</a>
+                <a href="#contact" class="nav-item">GET A CONSULTATION</a>
+            </nav>
+        </div>
+        <div class="header-separator"></div>
+    </header>
     {% block container %}
     {% endblock %}
 </body>
@@ -60,5 +79,34 @@
 
     // Start observing the target element
     observer.observe(fadeElem);
+
+    // Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mainNav = document.getElementById('main-nav');
+
+    if (hamburgerBtn && mainNav) {
+        hamburgerBtn.addEventListener('click', function() {
+            hamburgerBtn.classList.toggle('active');
+            mainNav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a nav item
+        const navItems = mainNav.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                hamburgerBtn.classList.remove('active');
+                mainNav.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInside = mainNav.contains(event.target) || hamburgerBtn.contains(event.target);
+            if (!isClickInside && mainNav.classList.contains('active')) {
+                hamburgerBtn.classList.remove('active');
+                mainNav.classList.remove('active');
+            }
+        });
+    }
 </script>
 </html>
