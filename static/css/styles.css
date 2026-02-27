@@ -744,10 +744,18 @@ body {
 }
 
 .blog-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
   padding: 2%;
-  font-size: larger;
-  font-family: 'fredoka-light', sans-serif;
-  font-weight: bolder;
+}
+
+.cta-or {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  color: #1a1a1a;
 }
 
 .blog-label-link:link {
@@ -1727,14 +1735,22 @@ body {
   .testimonial-slider {
     max-width: 100%;
   }
-  
+
   .go-to-blogs {
     padding: 20px 15px;
+  }
+  
+  .blog-label {
+    flex-direction: column;
+    gap: 12px;
   }
   
   .modern-blog-button {
     padding: 12px 24px;
     font-size: 13px;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
   }
   
   /* Footer */
